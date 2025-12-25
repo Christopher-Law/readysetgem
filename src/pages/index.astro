@@ -1,5 +1,5 @@
 ---
-
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -8,9 +8,813 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Ready Set Gem — Trading Card Restoration (Kingston, Ontario)</title>
+		<meta
+			name="description"
+			content="Collector-first trading card restoration for Pokémon, Yu‑Gi‑Oh!, Magic: The Gathering, and more. UV/blacklight inspection, condition report, and a careful restoration plan. Kingston, Ontario, Canada."
+		/>
+		<meta name="theme-color" content="#090A10" />
+
+		<meta property="og:title" content="Ready Set Gem — Trading Card Restoration" />
+		<meta
+			property="og:description"
+			content="Restore treasured cards for display with a careful, documented process: inspection (incl. UV/blacklight), plan approval, and restoration work. Kingston, Ontario, Canada."
+		/>
+		<meta property="og:type" content="website" />
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<a class="skip-link" href="#main">Skip to content</a>
+
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="/" aria-label="Ready Set Gem home">
+					<span class="brand-mark" aria-hidden="true"></span>
+					<span class="brand-text">Ready Set Gem</span>
+				</a>
+
+				<nav class="nav" aria-label="Primary">
+					<a href="#process">Process</a>
+					<a href="#pricing">Pricing</a>
+					<a href="#faq">FAQ</a>
+					<a class="nav-cta" href="#contact">Start</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="hero">
+				<div class="container hero-grid">
+					<div>
+						<p class="eyebrow">Kingston, Ontario • Proudly Canadian</p>
+						<h1>Trading card restoration for collectors who care about the details.</h1>
+						<p class="lead">
+							Restore Pokémon, Yu‑Gi‑Oh!, Magic: The Gathering, and more with a careful inspection, a clear plan, and
+							collector-first craftsmanship—so your cards can be display‑worthy again.
+						</p>
+
+						<ul class="hero-highlights" aria-label="Service highlights">
+							<li><strong>3–14 days</strong> typical turnaround</li>
+							<li><strong>$50 / card</strong> (minimum 5 cards per order)</li>
+							<li><strong>UV/blacklight + magnification</strong> inspection</li>
+						</ul>
+
+						<div class="hero-actions">
+							<a class="btn primary" href="#contact">Request a review</a>
+							<a class="btn ghost" href="#process">See the process</a>
+						</div>
+
+						<p class="fineprint">
+							Restoration isn’t the same as “grading prep.” If we see a grading concern, we’ll flag it before we proceed.
+						</p>
+					</div>
+
+					<div class="hero-card" aria-label="Quick start">
+						<div class="hero-card-top">
+							<div class="chip">Collector-first</div>
+							<div class="chip alt">Documented</div>
+						</div>
+						<div class="hero-card-body">
+							<div class="scanline" aria-hidden="true"></div>
+							<h2 class="h2">Start with a review</h2>
+							<p class="card-copy">
+								Send front/back photos and a short description of the damage. We’ll reply with a condition overview, a
+								recommended plan, and what to expect.
+							</p>
+							<div class="card-actions">
+								<a class="btn primary" href="#contact">Email for a review</a>
+								<a class="btn ghost" href="#pricing">Pricing</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section trust" aria-label="What you get">
+				<div class="container">
+					<div class="grid-3">
+						<div class="panel">
+							<h3>Inspection, done properly</h3>
+							<p class="note">
+								Magnification + <strong>UV/blacklight inspection</strong> to spot inconsistencies, previous work, or
+								surface concerns before we touch the card.
+							</p>
+						</div>
+						<div class="panel">
+							<h3>A plan you approve</h3>
+							<p class="note">
+								We explain risks, expected outcomes, and what steps we recommend—then you confirm before restoration
+								begins.
+							</p>
+						</div>
+						<div class="panel">
+							<h3>Documented results</h3>
+							<p class="note">
+								Consistent intake/final photos and careful packaging for return shipping or pickup in the Kingston area.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="services">
+				<div class="container">
+					<div class="section-head">
+						<h2>What we restore</h2>
+						<p class="subhead">
+							We focus on stabilizing and improving presentation while respecting the card’s integrity. If a card is too
+							damaged, we’ll tell you up front.
+						</p>
+					</div>
+
+					<div class="grid-3">
+						<div class="panel">
+							<h3>Supported games</h3>
+							<ul class="bullets">
+								<li>Pokémon</li>
+								<li>Yu‑Gi‑Oh!</li>
+								<li>Magic: The Gathering</li>
+								<li>Sports & other TCG/CCGs</li>
+							</ul>
+						</div>
+						<div class="panel">
+							<h3>Common issues we can address</h3>
+							<ul class="bullets">
+								<li>Surface grime / handling residue (controlled cleaning)</li>
+								<li>Careful surface polish (non-coating) when appropriate</li>
+								<li>Light warping / bends (stabilization where safe)</li>
+								<li>Minor adhesive residue (case-by-case)</li>
+								<li>Edge roughness and lift risks (stabilization)</li>
+								<li>Pressure marks/dents (assessment required)</li>
+							</ul>
+						</div>
+						<div class="panel warning">
+							<h3>What we don’t do</h3>
+							<ul class="bullets">
+								<li>Trimming, sanding, or re-shaping corners</li>
+								<li>Recoloring, ink touch-ups, or print simulation</li>
+								<li>Any hidden work meant to fool graders</li>
+							</ul>
+							<p class="note">
+								Surface polishing: when appropriate, we may perform careful, controlled polishing to improve presentation
+								(e.g., reducing visible handling haze/scuffs). Results vary by card finish and damage, and we keep the
+								approach conservative and collector-first.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="process">
+				<div class="container">
+					<div class="section-head">
+						<h2>Our restoration process</h2>
+						<p class="subhead">
+							Careful, documented, and approval-based. Typical turnaround is <strong>3–14 days</strong> depending on damage,
+							drying/settling time, and workload.
+						</p>
+					</div>
+
+					<ol class="steps" aria-label="Ready Set Gem restoration workflow">
+						<li>
+							<div class="step-k">Intake + photos</div>
+							<div class="step-v">We log each card, photograph it under consistent lighting, and note obvious concerns.</div>
+						</li>
+						<li>
+							<div class="step-k">Close inspection</div>
+							<div class="step-v">Magnified review of surface, edges, corners, and stock behavior (warp, bend memory).</div>
+						</li>
+						<li>
+							<div class="step-k">UV/blacklight inspection</div>
+							<div class="step-v">
+								We check fluorescence and inconsistencies that can indicate prior alteration, contamination, or uneven
+								materials—then factor that into the plan.
+							</div>
+						</li>
+						<li>
+							<div class="step-k">Condition report + plan</div>
+							<div class="step-v">
+								You get a summary of risks, expected results, and what we recommend. Work starts only after you approve.
+							</div>
+						</li>
+						<li>
+							<div class="step-k">Restoration work</div>
+							<div class="step-v">
+								Controlled cleaning and stabilization steps chosen for the specific card/finish. We avoid aggressive
+								methods that increase alteration risk.
+							</div>
+						</li>
+						<li>
+							<div class="step-k">Final photos + return</div>
+							<div class="step-v">
+								We photograph results, package securely, and arrange return shipping or local pickup (Kingston area).
+							</div>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section" id="pricing">
+				<div class="container">
+					<div class="section-head">
+						<h2>Pricing</h2>
+						<p class="subhead">Straightforward, per-card pricing with a minimum order size so we can do the process properly.</p>
+					</div>
+
+					<div class="pricing">
+						<div class="panel price">
+							<div class="price-top">
+								<div>
+									<div class="price-k">$50</div>
+									<div class="price-v">per card</div>
+								</div>
+								<div class="badge">Minimum 5 cards/order</div>
+							</div>
+							<ul class="bullets">
+								<li>Inspection + condition report</li>
+								<li>UV/blacklight check for inconsistencies</li>
+								<li>Plan approval before work begins</li>
+								<li>Restoration work (case-by-case)</li>
+								<li>Before/after photos</li>
+							</ul>
+							<p class="note">
+								Shipping isn’t included. Inbound shipping is typically paid by the collector; return shipping is billed at
+								cost with tracking (optional insurance available). Local drop-off may be available by appointment.
+							</p>
+						</div>
+
+						<div class="panel">
+							<h3>Important note about grading</h3>
+							<p>
+								Some cards are so damaged that meaningful improvement would be considered <strong>alteration</strong> under
+								major grading standards (PSA/BGS/CGC). If we believe a card is likely to be rejected—or if the work would
+								push it into alteration territory—we will recommend against restoration for grading purposes.
+							</p>
+							<p class="note">
+								This service is best for collectors who want to preserve and display cherished cards that suffered damage.
+								We do not promise grade outcomes.
+							</p>
+							<div class="divider" aria-hidden="true"></div>
+							<h3>How to send cards safely</h3>
+							<ul class="bullets">
+								<li>Penny sleeve + semi-rigid holder (Card Saver) or toploader</li>
+								<li>Team bag (or painter’s tape on toploader—no adhesive on the card)</li>
+								<li>Bubble wrap + sturdy box (avoid envelopes for higher value orders)</li>
+								<li>Include a list of cards + your contact info</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="faq">
+				<div class="container">
+					<div class="section-head">
+						<h2>FAQ</h2>
+						<p class="subhead">Honest answers for collectors.</p>
+					</div>
+
+					<div class="faq">
+						<details class="panel" open>
+							<summary>Will restoration increase my grade?</summary>
+							<p>
+								Not guaranteed. Grading companies may flag certain improvements as alteration, and some defects (ink loss,
+								creases, stock separation) may remain visible. Our goal is careful, collector-first restoration for
+								presentation—never “tricks.”
+							</p>
+						</details>
+						<details class="panel">
+							<summary>Why is there a 5-card minimum?</summary>
+							<p>
+								Proper restoration requires controlled inspection, documentation, and time between steps. A minimum of
+								<strong>5 cards per order</strong> keeps the workflow efficient while maintaining the level of care each card
+								deserves.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>What kinds of cards do you reject?</summary>
+							<p>
+								Cards with severe stock separation, heavy water damage/mold risk, significant ink loss, or cases where any
+								meaningful improvement would likely be considered alteration. We’d rather decline than risk harming a
+								treasured card.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>What does UV/blacklight inspection do?</summary>
+							<p>
+								Under UV/blacklight, some materials fluoresce differently. It can reveal inconsistencies that suggest prior
+								alteration, contamination, uneven coatings, or unusual spots—useful for deciding what’s safe (and what’s not)
+								before we touch the card.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>How long does it take?</summary>
+							<p>
+								Typical turnaround is <strong>3–14 days</strong>, depending on the number of cards, damage complexity, and
+								any necessary settling time between steps.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>Do you work on cards in graded slabs?</summary>
+							<p>
+								No. We don’t open slabs, and we don’t perform restoration through plastic. If you have raw copies and want a
+								display-focused restoration plan, that’s where we can help.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>What should I include when I reach out?</summary>
+							<p>
+								Photos (front/back), the card names/sets, what happened (water, binder dents, sticky residue, etc.), and
+								your goal (display, sentimental preservation, collection uniformity). If grading is your goal, say so—we’ll
+								discuss risks early.
+							</p>
+						</details>
+						<details class="panel">
+							<summary>How do you handle shipping and risk?</summary>
+							<p>
+								We recommend tracked shipping and protective packaging. Return shipping is billed at cost and can include
+								insurance. Restoration always carries some risk; we document condition at intake and get plan approval before
+								starting any work.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<section class="section contact" id="contact">
+				<div class="container">
+					<div class="contact-panel">
+						<div>
+							<h2>Ready to bring your cards back to display-worthy?</h2>
+							<p class="subhead">
+								Send a few photos and a short description. We’ll reply with a recommended plan, risks to consider, and next
+								steps.
+							</p>
+							<ul class="mini">
+								<li><strong>Location:</strong> Kingston, Ontario, Canada</li>
+								<li><strong>Pricing:</strong> $50/card (minimum 5)</li>
+								<li><strong>Turnaround:</strong> typically 3–14 days</li>
+							</ul>
+						</div>
+						<div class="contact-actions">
+							<a
+								class="btn primary"
+								href="mailto:hello@readysetgem.ca?subject=Ready%20Set%20Gem%20—%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AHere%E2%80%99s%20what%20I%E2%80%99d%20like%20restored%3A%0A-%20Game%20(Pok%C3%A9mon%2FYu-Gi-Oh!%2FMTG%2Fother)%3A%0A-%20#%20of%20cards%3A%0A-%20Damage%20summary%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
+							>
+								Email for a review
+							</a>
+							<a class="btn ghost" href="#pricing">Review pricing</a>
+							<p class="fineprint">
+								Replace the email address in code if needed.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer-inner">
+				<div class="footer-left">
+					<div class="brand-row">
+						<span class="brand-mark" aria-hidden="true"></span>
+						<span class="brand-text">Ready Set Gem</span>
+					</div>
+					<p class="note">Trading card restoration in Kingston, Ontario — proudly Canadian.</p>
+				</div>
+				<div class="footer-right">
+					<a href="#process">Process</a>
+					<a href="#pricing">Pricing</a>
+					<a href="#faq">FAQ</a>
+					<a href="#contact">Contact</a>
+				</div>
+			</div>
+			<div class="container footer-bottom">
+				<p>© {year} Ready Set Gem. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<style>
+			:root{
+				--bg:#070810;
+				--bg2:#090A14;
+				--text:#E9ECFF;
+				--muted:#AAB0D6;
+				--panel:#0E1030;
+				--panel2:#0B0C22;
+				--stroke:rgba(255,255,255,.10);
+				--shadow:rgba(0,0,0,.65);
+				--mag:#FF3BBF;
+				--cyn:#23E7FF;
+				--ylw:#FFE06E;
+				--ok:#9CFF8C;
+				--radius:18px;
+			}
+
+			*{box-sizing:border-box}
+			html,body{height:100%}
+			body{
+				margin:0;
+				color:var(--text);
+				background-color: var(--bg);
+				background-image:
+					radial-gradient(1400px 900px at 15% 0%, rgba(35,231,255,.16) 0%, rgba(35,231,255,0) 62%),
+					radial-gradient(1200px 900px at 85% 10%, rgba(255,59,191,.14) 0%, rgba(255,59,191,0) 62%),
+					radial-gradient(1000px 900px at 50% 110%, rgba(255,224,110,.07) 0%, rgba(255,224,110,0) 66%),
+					linear-gradient(180deg, var(--bg) 0%, var(--bg2) 55%, var(--bg) 100%);
+				background-attachment: fixed;
+				font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+				line-height:1.5;
+				letter-spacing:.2px;
+			}
+			body::before{
+				content:"";
+				position:fixed;
+				inset:0;
+				pointer-events:none;
+				z-index:-1;
+				opacity:.055;
+				mix-blend-mode: soft-light;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+			}
+			a{color:inherit}
+			.container{width:min(1120px, calc(100% - 40px)); margin:0 auto}
+
+			.skip-link{
+				position:absolute;
+				left:-999px;
+				top:12px;
+				padding:10px 12px;
+				border-radius:12px;
+				background:rgba(255,255,255,.12);
+				border:1px solid var(--stroke);
+				backdrop-filter: blur(10px);
+				z-index:999;
+			}
+			.skip-link:focus{left:16px}
+
+			.site-header{
+				position:sticky;
+				top:0;
+				z-index:50;
+				background:rgba(7,8,16,.55);
+				backdrop-filter: blur(12px);
+				border-bottom:1px solid rgba(255,255,255,.08);
+			}
+			.header-inner{
+				display:flex;
+				align-items:center;
+				justify-content:space-between;
+				padding:14px 0;
+				gap:16px;
+			}
+			.brand{
+				display:flex;
+				align-items:center;
+				gap:10px;
+				text-decoration:none;
+				font-weight:700;
+				letter-spacing:.6px;
+			}
+			.brand-mark{
+				width:18px; height:18px; border-radius:6px;
+				background:
+					linear-gradient(135deg, rgba(255,59,191,.95), rgba(35,231,255,.95));
+				box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 10px 30px rgba(35,231,255,.18);
+			}
+			.brand-text{font-size:14px}
+
+			.nav{display:flex; gap:14px; align-items:center}
+			.nav a{
+				text-decoration:none;
+				color:rgba(233,236,255,.88);
+				font-weight:600;
+				font-size:13px;
+				padding:10px 10px;
+				border-radius:12px;
+			}
+			.nav a:hover{background:rgba(255,255,255,.06)}
+			.nav a:focus-visible{outline:2px solid rgba(35,231,255,.7); outline-offset:2px}
+			.nav-cta{
+				border:1px solid rgba(255,255,255,.18);
+				background:rgba(255,255,255,.05);
+			}
+
+			.hero{padding:56px 0 26px}
+			.hero-grid{
+				display:grid;
+				grid-template-columns: 1.05fr .95fr;
+				gap:22px;
+				align-items:start;
+			}
+			.eyebrow{
+				margin:0 0 14px;
+				font-size:12px;
+				color:rgba(233,236,255,.78);
+				letter-spacing:1.2px;
+				text-transform:uppercase;
+			}
+			h1{
+				margin:0 0 14px;
+				font-size: clamp(34px, 3.6vw, 52px);
+				line-height:1.04;
+				letter-spacing:-.6px;
+			}
+			.lead{
+				margin:0 0 18px;
+				color:rgba(233,236,255,.86);
+				font-size: clamp(16px, 1.25vw, 18px);
+				max-width: 62ch;
+			}
+
+			.hero-highlights{
+				margin:14px 0 16px;
+				padding-left:18px;
+				color:rgba(233,236,255,.82);
+				display:grid;
+				gap:8px;
+				max-width: 68ch;
+			}
+			.hero-highlights strong{color:rgba(233,236,255,.96)}
+
+			.hero-actions{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:10px}
+			.btn{
+				display:inline-flex;
+				align-items:center;
+				justify-content:center;
+				gap:10px;
+				padding:12px 14px;
+				border-radius:14px;
+				text-decoration:none;
+				font-weight:800;
+				font-size:13px;
+				letter-spacing:.3px;
+				border:1px solid rgba(255,255,255,.14);
+			}
+			.btn.primary{
+				color:rgba(233,236,255,.96);
+				background:
+					linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04)),
+					linear-gradient(135deg, rgba(255,59,191,.22), rgba(35,231,255,.18));
+				border-color:rgba(255,255,255,.18);
+				box-shadow: 0 18px 44px rgba(0,0,0,.35), 0 0 0 1px rgba(255,59,191,.10) inset;
+			}
+			.btn.ghost{
+				background:rgba(255,255,255,.04);
+			}
+			.btn.primary:hover{
+				background:
+					linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05)),
+					linear-gradient(135deg, rgba(255,59,191,.26), rgba(35,231,255,.22));
+			}
+			.btn:hover{transform: translateY(-1px)}
+			.btn:active{transform: translateY(0px)}
+			.btn:focus-visible{outline:2px solid rgba(255,224,110,.75); outline-offset:2px}
+
+			.fineprint{margin:14px 0 0; color:rgba(233,236,255,.66); font-size:12px; max-width: 70ch}
+
+			.hero-card{
+				position:relative;
+				border-radius: var(--radius);
+				background:
+					radial-gradient(1100px 420px at 40% -10%, rgba(35,231,255,.18), transparent 45%),
+					linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+				border:1px solid rgba(255,255,255,.12);
+				box-shadow: 0 30px 80px rgba(0,0,0,.45);
+				overflow:hidden;
+			}
+			.hero-card-top{
+				display:flex;
+				gap:10px;
+				flex-wrap:wrap;
+				padding:16px 16px 0;
+			}
+			.chip{
+				font-size:12px;
+				font-weight:800;
+				color:rgba(233,236,255,.92);
+				padding:8px 10px;
+				border-radius:999px;
+				background:rgba(255,255,255,.06);
+				border:1px solid rgba(255,255,255,.12);
+			}
+			.chip.alt{
+				background:linear-gradient(135deg, rgba(255,59,191,.12), rgba(35,231,255,.10));
+				border-color:rgba(255,255,255,.14);
+			}
+			.hero-card-body{padding:14px 16px 16px}
+			.h2{margin:10px 0 10px; font-size:18px; letter-spacing:-.3px}
+			.card-copy{margin:0 0 12px; color:rgba(233,236,255,.78); font-size:13px}
+			.card-actions{display:flex; gap:10px; flex-wrap:wrap}
+
+			.scanline{
+				position:absolute;
+				inset:0;
+				background:
+					linear-gradient(180deg, rgba(255,255,255,.035), transparent 30%, rgba(255,255,255,.02) 55%, transparent 80%),
+					repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0, rgba(255,255,255,.05) 1px, transparent 1px, transparent 6px);
+				opacity:.20;
+				mix-blend-mode: overlay;
+				pointer-events:none;
+				transform: translateY(-30%);
+			}
+
+			.checklist{margin:0; padding-left:18px; color:rgba(233,236,255,.86)}
+			.checklist li{margin:8px 0}
+
+			.section{padding:42px 0}
+			.section.trust{padding-top:8px}
+			.section-head{margin-bottom:18px}
+			.section h2{
+				margin:0 0 10px;
+				font-size:28px;
+				letter-spacing:-.4px;
+			}
+			.subhead{
+				margin:0;
+				color:rgba(233,236,255,.78);
+				max-width: 80ch;
+			}
+
+			.grid-3{
+				display:grid;
+				grid-template-columns:repeat(3, minmax(0,1fr));
+				gap:14px;
+			}
+
+			.panel{
+				border-radius: var(--radius);
+				background:
+					linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+				border:1px solid rgba(255,255,255,.12);
+				padding:16px;
+				box-shadow: 0 20px 50px rgba(0,0,0,.28);
+			}
+			.panel h3{margin:0 0 10px; font-size:16px; letter-spacing:-.2px}
+			.bullets{margin:0; padding-left:18px; color:rgba(233,236,255,.84)}
+			.bullets li{margin:8px 0}
+			.note{margin:10px 0 0; color:rgba(233,236,255,.70); font-size:12px}
+			.panel.warning{
+				background:
+					radial-gradient(700px 380px at 20% 0%, rgba(255,224,110,.10), transparent 55%),
+					linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+				border-color: rgba(255,224,110,.20);
+			}
+
+			.steps{
+				margin:0;
+				padding:0;
+				list-style:none;
+				display:grid;
+				grid-template-columns:repeat(2, minmax(0,1fr));
+				gap:12px;
+				counter-reset: step;
+			}
+			.steps li{
+				position:relative;
+				padding:16px 16px 16px 54px;
+				border-radius: var(--radius);
+				background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+				border:1px solid rgba(255,255,255,.12);
+				box-shadow: 0 18px 45px rgba(0,0,0,.26);
+			}
+			.steps li::before{
+				counter-increment: step;
+				content: counter(step);
+				position:absolute;
+				left:14px;
+				top:14px;
+				width:30px; height:30px;
+				display:grid;
+				place-items:center;
+				border-radius:12px;
+				font-weight:900;
+				background:linear-gradient(135deg, rgba(255,59,191,.22), rgba(35,231,255,.20));
+				border:1px solid rgba(255,255,255,.16);
+			}
+			.step-k{font-weight:900; letter-spacing:.1px}
+			.step-v{margin-top:6px; color:rgba(233,236,255,.78); font-size:13px}
+
+			.pricing{
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+				gap:14px;
+				align-items:start;
+			}
+			.price-top{
+				display:flex;
+				align-items:flex-start;
+				justify-content:space-between;
+				gap:12px;
+				margin-bottom:10px;
+			}
+			.price-k{font-size:44px; font-weight:1000; letter-spacing:-1px; line-height:1}
+			.price-v{margin-top:4px; color:rgba(233,236,255,.76); font-weight:700}
+			.badge{
+				font-size:12px;
+				font-weight:900;
+				padding:10px 10px;
+				border-radius:14px;
+				background:rgba(255,255,255,.06);
+				border:1px solid rgba(255,255,255,.12);
+				white-space:nowrap;
+			}
+			.panel.price{
+				background:
+					radial-gradient(900px 480px at 20% 0%, rgba(255,59,191,.12), transparent 60%),
+					radial-gradient(900px 480px at 80% 0%, rgba(35,231,255,.10), transparent 60%),
+					linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+			}
+			.divider{
+				height:1px;
+				background:rgba(255,255,255,.10);
+				margin:14px 0;
+			}
+
+			.faq{
+				display:grid;
+				grid-template-columns:repeat(2, minmax(0,1fr));
+				gap:12px;
+			}
+			details.panel{padding:0}
+			summary{
+				cursor:pointer;
+				padding:16px;
+				font-weight:900;
+				list-style:none;
+			}
+			summary::-webkit-details-marker{display:none}
+			details.panel > p{
+				margin:0;
+				padding:0 16px 16px;
+				color:rgba(233,236,255,.78);
+				font-size:13px;
+			}
+			details.panel:focus-within{outline:2px solid rgba(35,231,255,.45); outline-offset:2px}
+
+			.contact-panel{
+				border-radius: calc(var(--radius) + 4px);
+				padding:18px;
+				border:1px solid rgba(255,255,255,.14);
+				background:
+					radial-gradient(1000px 600px at 20% 0%, rgba(35,231,255,.16), transparent 55%),
+					radial-gradient(800px 600px at 80% 0%, rgba(255,59,191,.14), transparent 55%),
+					linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+				display:grid;
+				grid-template-columns: 1.3fr .7fr;
+				gap:16px;
+				align-items:start;
+				box-shadow: 0 30px 70px rgba(0,0,0,.35);
+			}
+			.mini{margin:12px 0 0; padding-left:18px; color:rgba(233,236,255,.84)}
+			.mini li{margin:8px 0}
+			.contact-actions{display:flex; flex-direction:column; gap:10px; align-items:flex-start}
+
+			.footer{
+				padding:24px 0 18px;
+				border-top:1px solid rgba(255,255,255,.08);
+				background:rgba(7,8,16,.35);
+			}
+			.footer-inner{
+				display:flex;
+				justify-content:space-between;
+				gap:16px;
+				align-items:flex-start;
+				padding-bottom:12px;
+			}
+			.brand-row{display:flex; align-items:center; gap:10px; font-weight:900}
+			.footer-right{display:flex; gap:12px; flex-wrap:wrap}
+			.footer-right a{
+				text-decoration:none;
+				color:rgba(233,236,255,.78);
+				font-weight:800;
+				font-size:13px;
+				padding:10px 10px;
+				border-radius:12px;
+			}
+			.footer-right a:hover{background:rgba(255,255,255,.06)}
+			.footer-bottom{
+				padding-top:10px;
+				color:rgba(233,236,255,.62);
+				font-size:12px;
+			}
+
+			@media (max-width: 980px){
+				.hero-grid{grid-template-columns: 1fr; gap:14px}
+				.hero{padding-top:38px}
+				.hero-metrics{grid-template-columns: 1fr; }
+				.grid-3{grid-template-columns: 1fr}
+				.steps{grid-template-columns: 1fr}
+				.pricing{grid-template-columns: 1fr}
+				.faq{grid-template-columns: 1fr}
+				.contact-panel{grid-template-columns: 1fr}
+				.nav{gap:6px}
+				.nav a{padding:10px 8px}
+			}
+
+			@media (prefers-reduced-motion: reduce){
+				.btn:hover{transform:none}
+				.scanline{display:none}
+			}
+		</style>
 	</body>
 </html>
