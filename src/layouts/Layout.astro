@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = "Ready Set Gem — Trading Card Restoration (Kingston, Ontario)",
+  description = "Collector-first trading card restoration for Pokémon, Yu‑Gi‑Oh!, Magic: The Gathering, and more. UV/blacklight inspection, condition report, and a careful restoration plan. Kingston, Ontario, Canada.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#F8FAFF" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="min-h-dvh bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 antialiased">
+    <slot />
+  </body>
+</html>
+
+
