@@ -4,164 +4,173 @@ import Layout from "../layouts/Layout.astro";
 const year = new Date().getFullYear();
 ---
 
-<Layout>
+<Layout
+	title="Ready Set Gem — Card Restoration"
+	description="Trading card restoration service. We carefully restore your cards with detailed inspection and honest communication. Based in Kingston, Ontario."
+>
 	<a
 		href="#main"
-		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-xl border border-slate-200 bg-white/90 px-3 py-2 text-sm font-semibold text-slate-900 shadow-lg backdrop-blur"
+		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded border border-amber-600 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-900 shadow-lg"
 	>
 		Skip to content
 	</a>
 
-	<header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/70 backdrop-blur">
-		<div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3">
-			<a href="/" class="group flex items-center gap-2.5 font-extrabold tracking-tight text-slate-900">
+	<header class="sticky top-0 z-40 border-b border-amber-200/60 bg-amber-50/80 backdrop-blur-sm">
+		<div class="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4">
+			<a href="/" class="group flex items-center gap-2.5 font-bold tracking-tight text-amber-900">
 				<span
 					aria-hidden="true"
-						class="h-4 w-4 rounded-md bg-linear-to-br from-fuchsia-500 via-violet-500 to-cyan-400 shadow-sm ring-1 ring-black/5"
+					class="h-5 w-5 rounded border-2 border-amber-700 bg-amber-100"
 				></span>
-				<span class="text-sm sm:text-base">Ready Set Gem</span>
+				<span class="text-base sm:text-lg">Ready Set Gem</span>
 			</a>
 
-			<nav class="hidden items-center gap-1 sm:flex" aria-label="Primary">
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#process">Process</a>
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#pricing">Pricing</a>
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#faq">FAQ</a>
+			<nav class="hidden items-center gap-2 sm:flex" aria-label="Primary">
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
 				<a
-					class="ml-1 rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
+					class="ml-1 rounded-lg border-2 border-amber-700 bg-amber-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-amber-700"
 					href="#contact"
 				>
-					Start
+					Get Started
 				</a>
 			</nav>
 
 			<a
-				class="sm:hidden rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
+				class="sm:hidden rounded-lg border-2 border-amber-700 bg-amber-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-amber-700"
 				href="#contact"
 			>
-				Start
+				Get Started
 			</a>
 		</div>
 	</header>
 
 	<main id="main">
-		<section class="relative overflow-hidden">
-			<div class="absolute inset-0 -z-10">
-				<div class="absolute -top-24 left-1/2 h-[540px] w-[900px] -translate-x-1/2 rounded-full bg-linear-to-r from-fuchsia-300/35 via-violet-300/30 to-cyan-300/35 blur-3xl"></div>
-				<div class="absolute -bottom-40 left-1/2 h-[520px] w-[860px] -translate-x-1/2 rounded-full bg-linear-to-r from-amber-200/25 via-rose-200/20 to-sky-200/25 blur-3xl"></div>
-			</div>
-
-			<div class="mx-auto w-full max-w-6xl px-5 pb-10 pt-12 sm:pt-16">
-				<p class="text-sm font-semibold tracking-wide text-slate-600">
-					Kingston, Ontario • Serving collectors across North America
-				</p>
-				<h1 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
-					Trading card restoration for collectors.
-				</h1>
-				<p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700 sm:text-xl">
-					We restore Pokémon, Yu‑Gi‑Oh!, Magic: The Gathering, and more through careful inspection, a clear restoration plan,
-					and conservative, collector‑first work—so your cards can be display‑worthy again.
-				</p>
-
-				<div class="mt-6 flex flex-wrap items-center gap-3">
-					<a
-						class="inline-flex items-center justify-center rounded-2xl bg-linear-to-r from-fuchsia-600 via-violet-600 to-cyan-500 px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-violet-500/15 ring-1 ring-black/5 hover:opacity-95"
-						href="#contact"
-					>
-						Request a review
-					</a>
-					<a
-						class="inline-flex items-center justify-center rounded-2xl bg-white/70 px-5 py-3 text-sm font-extrabold text-slate-800 ring-1 ring-slate-200 shadow-sm hover:bg-white"
-						href="#process"
-					>
-						See the process
-					</a>
-				</div>
-
-				<div class="mt-7 flex flex-wrap gap-2" role="list" aria-label="Key details">
-					<div class="rounded-full bg-white/75 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200" role="listitem">
-						<strong class="font-extrabold text-slate-900">$50 / card</strong> (minimum 5)
-					</div>
-					<div class="rounded-full bg-white/75 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200" role="listitem">
-						<strong class="font-extrabold text-slate-900">3–14 days</strong> typical turnaround
-					</div>
-					<div class="rounded-full bg-white/75 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200" role="listitem">
-						<strong class="font-extrabold text-slate-900">Careful inspection</strong> + plan approval
-					</div>
-				</div>
-
-				<p class="mt-5 max-w-3xl text-sm text-slate-600">
-					Restoration isn’t the same as “grading prep.” If we see a grading concern, we’ll flag it before we proceed.
-				</p>
-			</div>
-		</section>
-
-		<section class="py-10">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="grid gap-4 md:grid-cols-3">
-					<div class="rounded-3xl bg-white/70 p-6 ring-1 ring-slate-200 shadow-sm">
-						<h2 class="text-base font-extrabold tracking-tight text-slate-950">Inspection, done properly</h2>
-						<p class="mt-2 text-slate-700">
-							We inspect surface, edges, corners, and stock behavior to understand what’s happening before we touch the card.
-						</p>
-					</div>
-					<div class="rounded-3xl bg-white/70 p-6 ring-1 ring-slate-200 shadow-sm">
-						<h2 class="text-base font-extrabold tracking-tight text-slate-950">A plan you approve</h2>
-						<p class="mt-2 text-slate-700">
-							We explain risks, expected outcomes, and what steps we recommend—then you confirm before restoration begins.
-						</p>
-					</div>
-					<div class="rounded-3xl bg-white/70 p-6 ring-1 ring-slate-200 shadow-sm">
-						<h2 class="text-base font-extrabold tracking-tight text-slate-950">Documented results</h2>
-						<p class="mt-2 text-slate-700">
-							Consistent intake/final photos and careful packaging for return shipping.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="py-12" id="services">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="max-w-3xl">
-					<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">What we restore</h2>
-					<p class="mt-2 text-slate-700">
-						We focus on stabilizing and improving presentation while respecting the card’s integrity. If a card is too damaged,
-						we’ll tell you up front.
+		<section class="relative overflow-hidden py-12 sm:py-16">
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<div class="paper-card paper-texture rounded-2xl p-8 sm:p-12">
+					<p class="text-sm font-semibold text-amber-800">
+						Kingston, Ontario • Serving collectors across North America
 					</p>
-				</div>
+					<h1 class="mt-4 text-4xl font-bold leading-tight text-amber-950 sm:text-5xl">
+						We restore trading cards. Carefully, honestly, and with respect for what you collect.
+					</h1>
+					<p class="mt-5 max-w-2xl text-lg leading-relaxed text-amber-900/90 sm:text-xl">
+						Whether it's a childhood favorite that got a little rough, or something you picked up that needs attention—we take the time to understand what's happening with your card before we do anything.
+					</p>
 
-				<div class="mt-6 grid gap-4 lg:grid-cols-3">
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<h3 class="text-base font-extrabold text-slate-950">Supported games</h3>
-						<ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-							<li>Pokémon</li>
-							<li>Yu‑Gi‑Oh!</li>
-							<li>Magic: The Gathering</li>
-							<li>Sports & other TCG/CCGs</li>
-						</ul>
+					<div class="mt-8 flex flex-wrap items-center gap-3">
+						<a
+							class="inline-flex items-center justify-center rounded-lg border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-md hover:bg-amber-700"
+							href="#contact"
+						>
+							Send us your cards
+						</a>
+						<a
+							class="inline-flex items-center justify-center rounded-lg border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
+							href="#how-it-works"
+						>
+							Learn how it works
+						</a>
 					</div>
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<h3 class="text-base font-extrabold text-slate-950">Common issues we can address</h3>
-						<ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-							<li>Surface grime / handling residue (controlled cleaning)</li>
-							<li>Careful surface polish when appropriate</li>
-							<li>Light warping / bends (stabilization where safe)</li>
-							<li>Minor adhesive residue (case-by-case)</li>
-							<li>Edge roughness and lift risks (stabilization)</li>
-							<li>Pressure marks/dents (assessment required)</li>
-						</ul>
+
+					<div class="mt-8 flex flex-wrap gap-3" role="list" aria-label="Key details">
+						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
+							<strong class="font-bold">$50 per card</strong> (minimum 5 cards)
+						</div>
+						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
+							<strong class="font-bold">3–14 days</strong> turnaround
+						</div>
+						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
+							<strong class="font-bold">You approve</strong> the plan first
+						</div>
 					</div>
-					<div class="rounded-3xl bg-linear-to-br from-amber-50 via-white to-rose-50 p-6 ring-1 ring-amber-200/60 shadow-sm">
-						<h3 class="text-base font-extrabold text-slate-950">What we don’t do</h3>
-						<ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-							<li>Trimming, sanding, or re-shaping corners</li>
-							<li>Recoloring, ink touch-ups, or print simulation</li>
-							<li>Any hidden work meant to fool graders</li>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-12" id="how-it-works" aria-label="How it works">
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<h2 class="text-3xl font-bold text-amber-950">How we work</h2>
+				<p class="mt-3 text-lg text-amber-900/80">
+					No surprises. We look closely, we explain what we see, and we only work on what you're comfortable with.
+				</p>
+
+				<div class="mt-8 grid gap-6 md:grid-cols-3">
+					<div class="paper-card rounded-xl p-6">
+						<h3 class="text-lg font-bold text-amber-950">We inspect everything</h3>
+						<p class="mt-2 text-amber-900/80">
+							Under magnification and UV light. Surface, edges, corners, and how the card stock behaves. We need to know what we're dealing with.
+						</p>
+					</div>
+					<div class="paper-card rounded-xl p-6">
+						<h3 class="text-lg font-bold text-amber-950">We tell you what we found</h3>
+						<p class="mt-2 text-amber-900/80">
+							Here's what's wrong, what we can realistically fix, what the risks are, and what we won't touch. You decide if we proceed.
+						</p>
+					</div>
+					<div class="paper-card rounded-xl p-6">
+						<h3 class="text-lg font-bold text-amber-950">We document it all</h3>
+						<p class="mt-2 text-amber-900/80">
+							Before photos, after photos, and careful notes. Your cards get packaged properly for the trip back home.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-12" id="what-we-do">
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<h2 class="text-3xl font-bold text-amber-950">What we can help with</h2>
+				<p class="mt-3 text-lg text-amber-900/80">
+					We work on Pokémon, Yu-Gi-Oh!, Magic: The Gathering, sports cards, and other trading cards. Here's what we typically handle.
+				</p>
+
+				<div class="mt-8 grid gap-6 lg:grid-cols-2">
+					<div class="paper-card rounded-xl p-6">
+						<h3 class="text-lg font-bold text-amber-950">Common fixes</h3>
+						<ul class="mt-3 space-y-2 text-amber-900/80">
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Surface cleaning (dirt, fingerprints, handling marks)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Light warping or bends (when it's safe to address)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Minor adhesive residue</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Edge roughness or lifting (stabilization)</span>
+							</li>
 						</ul>
-						<p class="mt-3 text-sm text-slate-600">
-							Surface polishing: when appropriate, we may perform careful, controlled polishing to improve presentation (e.g., reducing
-							visible handling haze/scuffs). Results vary by card finish and damage, and we keep the approach conservative and
-							collector-first.
+						<p class="mt-4 text-sm text-amber-900/70">
+							Every card is different. We'll assess yours and be honest about what's possible.
+						</p>
+					</div>
+
+					<div class="paper-card-elevated rounded-xl border-2 border-amber-400 p-6">
+						<h3 class="text-lg font-bold text-amber-950">What we won't do</h3>
+						<ul class="mt-3 space-y-2 text-amber-900/80">
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-800"></span>
+								<span>Trim, sand, or reshape corners or edges</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-800"></span>
+								<span>Add color, touch up ink, or simulate printing</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-800"></span>
+								<span>Anything meant to fool grading companies</span>
+							</li>
+						</ul>
+						<p class="mt-4 text-sm font-medium text-amber-900">
+							We're here to restore, not alter. If something looks like it would be flagged as alteration, we'll tell you upfront.
 						</p>
 					</div>
 				</div>
@@ -169,103 +178,148 @@ const year = new Date().getFullYear();
 		</section>
 
 		<section class="py-12" id="process">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="max-w-3xl">
-					<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Our restoration process</h2>
-					<p class="mt-2 text-slate-700">
-						Careful, documented, and approval-based. Typical turnaround is <strong class="font-extrabold text-slate-900">3–14 days</strong>
-						depending on damage, drying/settling time, and workload.
-					</p>
-				</div>
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<h2 class="text-3xl font-bold text-amber-950">The process</h2>
+				<p class="mt-3 text-lg text-amber-900/80">
+					From the moment your cards arrive until they're on their way back. Usually takes 3–14 days, depending on what needs doing.
+				</p>
 
-				<ol class="mt-6 grid gap-4 md:grid-cols-2" aria-label="Ready Set Gem restoration workflow">
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">1) Intake + photos</div>
-						<p class="mt-2 text-slate-700">We log each card, photograph it under consistent lighting, and note obvious concerns.</p>
-					</li>
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">2) Close inspection</div>
-						<p class="mt-2 text-slate-700">Magnified review of surface, edges, corners, and stock behavior (warp, bend memory).</p>
-					</li>
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">3) UV/blacklight inspection</div>
-						<p class="mt-2 text-slate-700">
-							We check fluorescence and inconsistencies that can indicate prior alteration, contamination, or uneven materials—then
-							factor that into the plan.
-						</p>
-					</li>
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">4) Condition report + plan</div>
-						<p class="mt-2 text-slate-700">
-							You get a summary of risks, expected results, and what we recommend. Work starts only after you approve.
-						</p>
-					</li>
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">5) Restoration work</div>
-						<p class="mt-2 text-slate-700">
-							Controlled cleaning and stabilization steps chosen for the specific card/finish. We avoid aggressive methods that
-							increase alteration risk.
-						</p>
-					</li>
-					<li class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="text-sm font-extrabold text-slate-950">6) Final photos + return</div>
-						<p class="mt-2 text-slate-700">
-							We photograph results, package securely, and arrange return shipping.
-						</p>
-					</li>
-				</ol>
+				<div class="mt-8 space-y-4">
+					<div class="paper-card rounded-xl p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
+								1
+							</div>
+							<div>
+								<h3 class="text-lg font-bold text-amber-950">Your cards arrive</h3>
+								<p class="mt-1 text-amber-900/80">
+									We log everything, take consistent photos under good lighting, and make initial notes about condition.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="paper-card rounded-xl p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
+								2
+							</div>
+							<div>
+								<h3 class="text-lg font-bold text-amber-950">Close inspection</h3>
+								<p class="mt-1 text-amber-900/80">
+									Magnification and UV light check. We look at surface, edges, corners, and how the card stock behaves. This tells us what's safe to attempt.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="paper-card rounded-xl p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
+								3
+							</div>
+							<div>
+								<h3 class="text-lg font-bold text-amber-950">We send you a plan</h3>
+								<p class="mt-1 text-amber-900/80">
+									Here's what we found, what we think we can do, what the risks are, and what we recommend. You review and approve before any work happens.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="paper-card rounded-xl p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
+								4
+							</div>
+							<div>
+								<h3 class="text-lg font-bold text-amber-950">We do the work</h3>
+								<p class="mt-1 text-amber-900/80">
+									Once you approve, we proceed carefully. Controlled cleaning, stabilization where appropriate, and conservative methods throughout.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="paper-card rounded-xl p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
+								5
+							</div>
+							<div>
+								<h3 class="text-lg font-bold text-amber-950">Final photos and return</h3>
+								<p class="mt-1 text-amber-900/80">
+									We photograph the results, package everything securely, and arrange return shipping with tracking.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="py-12" id="pricing">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="max-w-3xl">
-					<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Pricing</h2>
-					<p class="mt-2 text-slate-700">Straightforward, per-card pricing with a minimum order size so we can do the process properly.</p>
-				</div>
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<h2 class="text-3xl font-bold text-amber-950">Pricing</h2>
+				<p class="mt-3 text-lg text-amber-900/80">
+					Simple and straightforward. $50 per card, with a 5-card minimum to make the process work properly.
+				</p>
 
-				<div class="mt-6 grid gap-4 lg:grid-cols-2">
-					<div class="rounded-3xl bg-linear-to-br from-fuchsia-50 via-white to-cyan-50 p-6 ring-1 ring-slate-200 shadow-sm">
-						<div class="flex items-start justify-between gap-4">
+				<div class="mt-8 grid gap-6 lg:grid-cols-2">
+					<div class="paper-card-elevated rounded-xl border-2 border-amber-400 p-8">
+						<div class="flex items-baseline justify-between gap-4">
 							<div>
-								<div class="text-5xl font-extrabold tracking-tight text-slate-950">$50</div>
-								<div class="mt-1 text-sm font-semibold text-slate-700">per card</div>
+								<div class="text-5xl font-bold text-amber-950">$50</div>
+								<div class="mt-1 text-base font-semibold text-amber-900/80">per card</div>
 							</div>
-							<div class="rounded-2xl bg-white/80 px-3 py-2 text-sm font-extrabold text-slate-900 ring-1 ring-slate-200">
-								Minimum 5 cards/order
+							<div class="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-900">
+								Min. 5 cards
 							</div>
 						</div>
-						<ul class="mt-5 list-disc space-y-2 pl-5 text-slate-700">
-							<li>Inspection + condition report</li>
-							<li>Plan approval before work begins</li>
-							<li>Restoration work (case-by-case)</li>
-							<li>Before/after photos</li>
-						</ul>
-						<p class="mt-3 text-sm text-slate-600">
-							Shipping isn’t included. Inbound shipping is typically paid by the collector; return shipping is billed at cost with tracking
-							(optional insurance available).
+						<div class="mt-6 space-y-2 text-amber-900/80">
+							<p class="font-semibold">What's included:</p>
+							<ul class="ml-4 list-disc space-y-1.5">
+								<li>Detailed inspection (magnification + UV)</li>
+								<li>Condition report and restoration plan</li>
+								<li>Your approval before work begins</li>
+								<li>Before and after photos</li>
+								<li>Secure return packaging</li>
+							</ul>
+						</div>
+						<p class="mt-6 text-sm text-amber-900/70">
+							Shipping isn't included. You typically pay for sending cards to us; we bill return shipping at cost with tracking (insurance available).
 						</p>
 					</div>
 
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<h3 class="text-base font-extrabold text-slate-950">Important note about grading</h3>
-						<p class="mt-2 text-slate-700">
-							Some cards are so damaged that meaningful improvement would be considered <strong class="font-extrabold text-slate-900">alteration</strong>
-							under major grading standards (PSA/BGS/CGC). If we believe a card is likely to be rejected—or if the work would push it into
-							alteration territory—we will recommend against restoration for grading purposes.
+					<div class="paper-card rounded-xl p-6">
+						<h3 class="text-lg font-bold text-amber-950">A note about grading</h3>
+						<p class="mt-2 text-amber-900/80">
+							Some cards are damaged in ways that would make meaningful improvement count as <strong class="font-semibold text-amber-950">alteration</strong> under PSA, BGS, or CGC standards. If we think that's the case, we'll tell you before we do anything.
 						</p>
-						<p class="mt-3 text-sm text-slate-600">
-							This service is best for collectors who want to preserve and display cherished cards that suffered damage. We do not promise grade outcomes.
+						<p class="mt-3 text-sm text-amber-900/70">
+							This service works best for collectors who want to preserve and display cards that got damaged. We don't promise grade improvements.
 						</p>
 
-						<div class="my-5 h-px w-full bg-slate-200"></div>
+						<div class="my-6 h-px bg-amber-200"></div>
 
-						<h3 class="text-base font-extrabold text-slate-950">How to send cards safely</h3>
-						<ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-							<li>Penny sleeve + semi-rigid holder (Card Saver) or toploader</li>
-							<li>Team bag (or painter’s tape on toploader—no adhesive on the card)</li>
-							<li>Bubble wrap + sturdy box (avoid envelopes for higher value orders)</li>
-							<li>Include a list of cards + your contact info</li>
+						<h3 class="text-lg font-bold text-amber-950">How to pack your cards</h3>
+						<ul class="mt-3 space-y-2 text-sm text-amber-900/80">
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Penny sleeve + semi-rigid holder (Card Saver) or toploader</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Team bag or painter's tape on toploader (no adhesive on the card)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Bubble wrap + sturdy box (avoid envelopes for valuable cards)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"></span>
+								<span>Include a list of cards and your contact info</span>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -273,63 +327,55 @@ const year = new Date().getFullYear();
 		</section>
 
 		<section class="py-12" id="faq">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="max-w-3xl">
-					<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">FAQ</h2>
-					<p class="mt-2 text-slate-700">Honest answers for collectors.</p>
-				</div>
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<h2 class="text-3xl font-bold text-amber-950">Common questions</h2>
+				<p class="mt-3 text-lg text-amber-900/80">
+					Straight answers to the things collectors usually ask.
+				</p>
 
-				<div class="mt-6 grid gap-4 lg:grid-cols-2">
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm" open>
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
-							Will restoration increase my grade?
+				<div class="mt-8 space-y-4">
+					<details class="paper-card group rounded-xl p-6" open>
+						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
+							Will this improve my card's grade?
 						</summary>
-						<p class="mt-3 text-slate-700">
-							Not guaranteed. Grading companies may flag certain improvements as alteration, and some defects (ink loss, creases, stock separation)
-							may remain visible. Our goal is careful, collector-first restoration for presentation—never “tricks.”
+						<p class="mt-3 text-amber-900/80">
+							Maybe, but we don't guarantee it. Some restoration work can be seen as alteration by grading companies, and some damage (like creases or ink loss) might still be visible. We focus on making your card look better and stay stable—not on gaming the grading system.
 						</p>
 					</details>
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
-							Why is there a 5-card minimum?
+
+					<details class="paper-card group rounded-xl p-6">
+						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
+							Why do you need at least 5 cards?
 						</summary>
-						<p class="mt-3 text-slate-700">
-							Proper restoration requires controlled inspection, documentation, and time between steps. A minimum of <strong class="font-extrabold text-slate-900">5 cards per order</strong>
-							keeps the workflow efficient while maintaining the level of care each card deserves.
+						<p class="mt-3 text-amber-900/80">
+							Proper inspection and documentation take real time. A <strong class="font-semibold text-amber-950">5-card minimum</strong> keeps the process efficient and the per-card price fair. If you have fewer cards, we can still talk—just know the pricing might be different.
 						</p>
 					</details>
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
-							What kinds of cards do you reject?
+
+					<details class="paper-card group rounded-xl p-6">
+						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
+							What if my card is too damaged?
 						</summary>
-						<p class="mt-3 text-slate-700">
-							Cards with severe stock separation, heavy water damage/mold risk, significant ink loss, or cases where any meaningful improvement would likely be considered alteration.
-							We’d rather decline than risk harming a treasured card.
+						<p class="mt-3 text-amber-900/80">
+							We'll tell you. If a card has severe stock separation, mold risk, heavy water damage, or if fixing it would require alteration-level work, we'll recommend against restoration. We'd rather be honest than risk making things worse.
 						</p>
 					</details>
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
-							What does “inspection” mean?
-						</summary>
-						<p class="mt-3 text-slate-700">
-							We examine the surface and print, edges and corners, and overall stock behavior (warp, bend memory, pressure marks) to understand
-							what’s happening and what’s safe to attempt. This helps set expectations and informs the restoration plan.
-						</p>
-					</details>
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
+
+					<details class="paper-card group rounded-xl p-6">
+						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							How long does it take?
 						</summary>
-						<p class="mt-3 text-slate-700">
-							Typical turnaround is <strong class="font-extrabold text-slate-900">3–14 days</strong>, depending on the number of cards, damage complexity, and any necessary settling time between steps.
+						<p class="mt-3 text-amber-900/80">
+							Usually <strong class="font-semibold text-amber-950">3–14 days</strong>, depending on how many cards you send, what kind of work they need, and whether there's drying or settling time required between steps.
 						</p>
 					</details>
-					<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
-						<summary class="cursor-pointer list-none text-base font-extrabold text-slate-950">
-							How do you handle shipping and risk?
+
+					<details class="paper-card group rounded-xl p-6">
+						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
+							What about shipping and insurance?
 						</summary>
-						<p class="mt-3 text-slate-700">
-							We recommend tracked shipping and protective packaging. Return shipping is billed at cost and can include insurance. Restoration always carries some risk; we document condition at intake and get plan approval before starting any work.
+						<p class="mt-3 text-amber-900/80">
+							We recommend tracked shipping both ways. You typically pay for sending cards to us; we bill return shipping at cost with tracking. Insurance is available for return shipping if you want it. Restoration always has some risk—that's why we document everything and get your approval first.
 						</p>
 					</details>
 				</div>
@@ -337,37 +383,34 @@ const year = new Date().getFullYear();
 		</section>
 
 		<section class="py-12" id="contact">
-			<div class="mx-auto w-full max-w-6xl px-5">
-				<div class="rounded-[28px] bg-linear-to-br from-slate-50 via-white to-slate-50 p-1 shadow-lg shadow-slate-900/5">
-					<div class="rounded-[26px] bg-white p-7 ring-1 ring-slate-200">
-						<div class="grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
-							<div>
-								<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Start with a review</h2>
-								<p class="mt-2 text-slate-700">
-									Send a few photos and a short description. We'll reply with a recommended plan, risks to consider, and next steps.
-								</p>
-								<ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-									<li><strong class="font-extrabold text-slate-900">Location:</strong> Kingston, Ontario, Canada</li>
-									<li><strong class="font-extrabold text-slate-900">Service area:</strong> North America</li>
-									<li><strong class="font-extrabold text-slate-900">Pricing:</strong> $50/card (minimum 5)</li>
-									<li><strong class="font-extrabold text-slate-900">Turnaround:</strong> typically 3–14 days</li>
-								</ul>
+			<div class="mx-auto w-full max-w-5xl px-5">
+				<div class="paper-card-elevated rounded-2xl border-2 border-amber-400 p-8 sm:p-10">
+					<div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
+						<div>
+							<h2 class="text-3xl font-bold text-amber-950">Ready to send us your cards?</h2>
+							<p class="mt-3 text-lg text-amber-900/80">
+								Send us photos and a quick note about what you'd like done. We'll get back to you with what we think we can help with, what the risks are, and how to proceed.
+							</p>
+							<div class="mt-6 space-y-2 text-amber-900/80">
+								<p><strong class="font-semibold text-amber-950">Location:</strong> Kingston, Ontario, Canada</p>
+								<p><strong class="font-semibold text-amber-950">Service area:</strong> North America</p>
+								<p><strong class="font-semibold text-amber-950">Pricing:</strong> $50 per card (minimum 5)</p>
+								<p><strong class="font-semibold text-amber-950">Turnaround:</strong> Typically 3–14 days</p>
 							</div>
-							<div class="flex flex-col items-start gap-3">
-								<a
-									class="inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-extrabold text-white shadow-sm ring-1 ring-slate-200 hover:bg-slate-800"
-									href="mailto:hello@readysetgem.ca?subject=Ready%20Set%20Gem%20—%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AHere%E2%80%99s%20what%20I%E2%80%99d%20like%20restored%3A%0A-%20Game%20(Pok%C3%A9mon%2FYu-Gi-Oh!%2FMTG%2Fother)%3A%0A-%20#%20of%20cards%3A%0A-%20Damage%20summary%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
-								>
-									Email for a review
-								</a>
-								<a
-									class="inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-5 py-3 text-sm font-extrabold text-slate-900 ring-1 ring-slate-200 hover:bg-slate-200"
-									href="#pricing"
-								>
-									Review pricing
-								</a>
-								<p class="text-sm text-slate-600">Replace the email address in code if needed.</p>
-							</div>
+						</div>
+						<div class="flex flex-col gap-3">
+							<a
+								class="inline-flex w-full items-center justify-center rounded-lg border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-md hover:bg-amber-700"
+								href="mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20send%20some%20cards%20for%20restoration%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
+							>
+								Email us
+							</a>
+							<a
+								class="inline-flex w-full items-center justify-center rounded-lg border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
+								href="#pricing"
+							>
+								See pricing details
+							</a>
 						</div>
 					</div>
 				</div>
@@ -375,24 +418,24 @@ const year = new Date().getFullYear();
 		</section>
 	</main>
 
-	<footer class="border-t border-slate-200/70 bg-white/60 py-10">
-		<div class="mx-auto flex w-full max-w-6xl flex-col justify-between gap-6 px-5 md:flex-row">
+	<footer class="border-t border-amber-200/60 bg-amber-50/40 py-10">
+		<div class="mx-auto flex w-full max-w-5xl flex-col justify-between gap-6 px-5 md:flex-row">
 			<div>
-				<div class="flex items-center gap-2.5 font-extrabold tracking-tight text-slate-900">
+				<div class="flex items-center gap-2.5 font-bold tracking-tight text-amber-950">
 					<span
 						aria-hidden="true"
-						class="h-4 w-4 rounded-md bg-linear-to-br from-fuchsia-500 via-violet-500 to-cyan-400 ring-1 ring-black/5"
+						class="h-5 w-5 rounded border-2 border-amber-700 bg-amber-100"
 					></span>
 					<span>Ready Set Gem</span>
 				</div>
-				<p class="mt-2 text-slate-600">Trading card restoration based in Kingston, Ontario — serving North America.</p>
-				<p class="mt-4 text-sm text-slate-500">© {year} Ready Set Gem. All rights reserved.</p>
+				<p class="mt-2 text-amber-900/70">Trading card restoration based in Kingston, Ontario — serving North America.</p>
+				<p class="mt-4 text-sm text-amber-900/60">© {year} Ready Set Gem. All rights reserved.</p>
 			</div>
 			<div class="flex flex-wrap items-center gap-2">
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#process">Process</a>
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#pricing">Pricing</a>
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#faq">FAQ</a>
-				<a class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100" href="#contact">Contact</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
+				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#contact">Contact</a>
 			</div>
 		</div>
 	</footer>

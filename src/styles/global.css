@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --paper-cream: #faf8f3;
+    --paper-warm: #f5f1e8;
+    --paper-shadow: #e8e0d0;
+    --ink-dark: #2c2416;
+    --ink-medium: #4a3f2e;
+    --ink-light: #6b5d47;
+    --accent-amber: #d97706;
+    --accent-rust: #b45309;
+    --border-warm: #d4c4a8;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(212, 196, 168, 0.03) 2px,
+        rgba(212, 196, 168, 0.03) 4px
+      ),
+      radial-gradient(circle at 20% 30%, rgba(217, 119, 6, 0.04), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.03), transparent 50%),
+      var(--paper-cream);
+    color: var(--ink-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  ::selection {
+    background: rgba(217, 119, 6, 0.15);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-amber);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .paper-card {
+    background: var(--paper-warm);
+    border: 1px solid var(--border-warm);
+    box-shadow: 
+      0 2px 8px rgba(44, 36, 22, 0.08),
+      0 1px 2px rgba(44, 36, 22, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .paper-card-elevated {
+    background: var(--paper-warm);
+    border: 1px solid var(--border-warm);
+    box-shadow: 
+      0 4px 16px rgba(44, 36, 22, 0.12),
+      0 2px 4px rgba(44, 36, 22, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .paper-texture {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 35px,
+        rgba(212, 196, 168, 0.02) 35px,
+        rgba(212, 196, 168, 0.02) 70px
+      );
+  }
+
+  .hobby-accent {
+    color: var(--accent-amber);
+  }
+
+  .hobby-accent-border {
+    border-color: var(--accent-rust);
+  }
+}

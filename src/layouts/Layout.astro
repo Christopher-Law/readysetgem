@@ -7,8 +7,8 @@ type Props = {
 };
 
 const {
-  title = "Ready Set Gem — Trading Card Restoration (Kingston, Ontario)",
-  description = "Collector-first trading card restoration for Pokémon, Yu‑Gi‑Oh!, Magic: The Gathering, and more. Careful inspection, a clear restoration plan, and documented results. Kingston, Ontario, Canada.",
+  title = "Ready Set Gem — Card Restoration",
+  description = "Trading card restoration service. We carefully restore your cards with detailed inspection and honest communication. Based in Kingston, Ontario.",
 } = Astro.props;
 ---
 
@@ -22,15 +22,13 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#F8FAFF" />
+    <meta name="theme-color" content="#faf8f3" />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
   </head>
-  <body class="min-h-dvh bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 antialiased">
+  <body class="min-h-dvh antialiased">
     <slot />
   </body>
 </html>
-
-
