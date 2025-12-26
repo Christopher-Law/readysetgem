@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
 >
 	<a
 		href="#main"
-		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded border border-amber-600 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-900 shadow-lg"
+		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 border border-amber-600 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-900"
 	>
 		Skip to content
 	</a>
@@ -26,11 +26,11 @@ const year = new Date().getFullYear();
 			</a>
 
 			<nav class="hidden items-center gap-2 sm:flex" aria-label="Primary">
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
 				<a
-					class="ml-1 rounded-lg border-2 border-amber-700 bg-amber-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-amber-700"
+					class="ml-1 border-2 border-amber-700 bg-amber-600 px-4 py-2 text-sm font-bold text-white hover:bg-amber-700"
 					href="#contact"
 				>
 					Get Started
@@ -38,7 +38,7 @@ const year = new Date().getFullYear();
 			</nav>
 
 			<a
-				class="sm:hidden rounded-lg border-2 border-amber-700 bg-amber-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-amber-700"
+				class="sm:hidden border-2 border-amber-700 bg-amber-600 px-3 py-2 text-sm font-bold text-white hover:bg-amber-700"
 				href="#contact"
 			>
 				Get Started
@@ -49,7 +49,7 @@ const year = new Date().getFullYear();
 	<main id="main">
 		<section class="relative overflow-hidden py-12 sm:py-16">
 			<div class="mx-auto w-full max-w-5xl px-5">
-				<div class="paper-card paper-texture rounded-2xl p-8 sm:p-12">
+				<div class="paper-texture  p-8 sm:p-12 bg-amber-50/50">
 					<p class="text-sm font-semibold text-amber-800">
 						Serving collectors across North America
 					</p>
@@ -62,29 +62,17 @@ const year = new Date().getFullYear();
 
 					<div class="mt-8 flex flex-wrap items-center gap-3">
 						<a
-							class="inline-flex items-center justify-center rounded-lg border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-md hover:bg-amber-700"
+							class="inline-flex items-center justify-center border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white hover:bg-amber-700"
 							href="#contact"
 						>
 							Send us your cards
 						</a>
 						<a
-							class="inline-flex items-center justify-center rounded-lg border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
+							class="inline-flex items-center justify-center  border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
 							href="#how-it-works"
 						>
 							Learn how it works
 						</a>
-					</div>
-
-					<div class="mt-8 flex flex-wrap gap-3" role="list" aria-label="Key details">
-						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
-							<strong class="font-bold">$50 per card</strong>, minimum 5 cards
-						</div>
-						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
-							<strong class="font-bold">7–14 days</strong> turnaround
-						</div>
-						<div class="rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900" role="listitem">
-							<strong class="font-bold">You approve</strong> the plan first
-						</div>
 					</div>
 				</div>
 			</div>
@@ -98,7 +86,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 lg:grid-cols-3">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">1) Email photos first</h3>
 						<p class="mt-2 text-amber-900/80">
 							Send a few clear photos and a short description of the damage and your goal (display, collection, or grading). We’ll reply with next steps and whether restoration looks realistic.
@@ -119,7 +107,7 @@ const year = new Date().getFullYear();
 						</ul>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">2) We send shipping instructions</h3>
 						<p class="mt-2 text-amber-900/80">
 							After we review your photos, we’ll confirm if we can take the job and share the exact shipping address and packing checklist. This prevents surprise shipments and reduces risk in transit.
@@ -129,7 +117,7 @@ const year = new Date().getFullYear();
 						</p>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">3) Inspection → plan → approval</h3>
 						<p class="mt-2 text-amber-900/80">
 							Once your cards arrive, we do a close inspection and send a restoration plan with risks and recommendations. <strong class="font-semibold text-amber-950">No work starts until you approve</strong>.
@@ -140,7 +128,7 @@ const year = new Date().getFullYear();
 					</div>
 				</div>
 
-				<div class="mt-6 paper-card-elevated rounded-xl border-2 border-amber-400 p-6">
+				<div class="mt-6 paper-card  border border-amber-300 p-6">
 					<h3 class="text-lg font-bold text-amber-950">Typical response time</h3>
 					<p class="mt-2 text-amber-900/80">
 						We reply to new requests within <strong class="font-semibold text-amber-950">1–2 business days</strong>. If you have a deadline (event, gift, show), mention it in your email and we’ll tell you what’s realistic.
@@ -157,19 +145,19 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 md:grid-cols-3">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">We inspect everything</h3>
 						<p class="mt-2 text-amber-900/80">
 							Under magnification and UV light. Surface, edges, corners, and how the card stock behaves. Understanding the full picture helps us work safely.
 						</p>
 					</div>
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">We tell you what we found</h3>
 						<p class="mt-2 text-amber-900/80">
 							Here's what we found, what we can fix, what the risks are, and what we won't touch. You decide if we proceed.
 						</p>
 					</div>
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">We document it all</h3>
 						<p class="mt-2 text-amber-900/80">
 							Before photos, after photos, and careful notes. Your cards are packaged securely for return shipping.
@@ -187,7 +175,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 lg:grid-cols-2">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">Common fixes</h3>
 						<ul class="mt-3 space-y-2 text-amber-900/80">
 							<li class="flex items-start gap-2">
@@ -212,7 +200,7 @@ const year = new Date().getFullYear();
 						</p>
 					</div>
 
-					<div class="paper-card-elevated rounded-xl border-2 border-amber-400 p-6">
+					<div class="paper-card  border border-amber-300 p-6">
 						<h3 class="text-lg font-bold text-amber-950">What we won't do</h3>
 						<ul class="mt-3 space-y-2 text-amber-900/80">
 							<li class="flex items-start gap-2">
@@ -243,7 +231,7 @@ const year = new Date().getFullYear();
 					From the moment your cards arrive until they're on their way back. We expect 7–14 days, but turnaround could be longer based on our queue, how many cards you send, and the damage on each card.
 				</p>
 
-				<div class="mt-6 paper-card rounded-xl p-6">
+				<div class="mt-6 paper-card  p-6">
 					<h3 class="text-lg font-bold text-amber-950">How updates + approval work</h3>
 					<p class="mt-2 text-amber-900/80">
 						Everything is documented in writing so you can make a clear decision. We communicate by email unless we agree on something else.
@@ -265,7 +253,7 @@ const year = new Date().getFullYear();
 				</div>
 
 				<div class="mt-8 space-y-4">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
 								1
@@ -279,7 +267,7 @@ const year = new Date().getFullYear();
 						</div>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
 								2
@@ -293,7 +281,7 @@ const year = new Date().getFullYear();
 						</div>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
 								3
@@ -310,7 +298,7 @@ const year = new Date().getFullYear();
 						</div>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
 								4
@@ -324,7 +312,7 @@ const year = new Date().getFullYear();
 						</div>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900">
 								5
@@ -342,7 +330,7 @@ const year = new Date().getFullYear();
 					</div>
 				</div>
 
-				<div class="mt-6 paper-card-elevated rounded-xl border-2 border-amber-400 p-6">
+				<div class="mt-6 paper-card  border border-amber-300 p-6">
 					<h3 class="text-lg font-bold text-amber-950">If you decide not to proceed</h3>
 					<p class="mt-2 text-amber-900/80">
 						If the risks don’t feel worth it, that’s okay. We’ll return your cards safely. Return shipping is billed at cost with tracking, and any inspection/handling fees (if applicable) are communicated up front so you’re never surprised.
@@ -359,7 +347,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 lg:grid-cols-2">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">Comprehensive documentation</h3>
 						<p class="mt-2 text-amber-900/80">
 							Your report includes before and after photos under consistent lighting, showing exactly what we found and what changed. We document everything we observed during inspection and restoration.
@@ -380,7 +368,7 @@ const year = new Date().getFullYear();
 						</ul>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">Magnification and UV analysis</h3>
 						<p class="mt-2 text-amber-900/80">
 							We use magnification and UV/blacklight to reveal imperfections that aren't visible to the naked eye. These images are included in your report, highlighting issues like surface scratches, hidden residue, or card stock anomalies.
@@ -402,30 +390,30 @@ const year = new Date().getFullYear();
 					</div>
 				</div>
 
-				<div class="mt-6 paper-card-elevated rounded-xl border-2 border-amber-400 p-6">
+				<div class="mt-6 paper-card  border border-amber-300 p-6">
 					<h3 class="text-lg font-bold text-amber-950">Surface condition assessment</h3>
 					<p class="mt-2 text-amber-900/80">
 						For each card, we document the surface condition before and after restoration. This gives you a clear comparison of what changed and what remains.
 					</p>
 					<div class="mt-4 grid gap-4 sm:grid-cols-2">
-						<div class="rounded-lg border border-amber-300 bg-amber-50/50 p-4">
+						<div class=" border border-amber-300 bg-amber-50/50 p-4">
 							<p class="text-sm font-semibold text-amber-900">Before restoration</p>
 							<p class="mt-1 text-sm text-amber-900/80">Documented surface condition, imperfections, and any visible damage</p>
 						</div>
-						<div class="rounded-lg border border-amber-300 bg-amber-50/50 p-4">
+						<div class=" border border-amber-300 bg-amber-50/50 p-4">
 							<p class="text-sm font-semibold text-amber-900">After restoration</p>
 							<p class="mt-1 text-sm text-amber-900/80">Current surface state, improvements made, and any remaining characteristics</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="mt-6 paper-card rounded-xl p-6">
+				<div class="mt-6 paper-card  p-6">
 					<h3 class="text-lg font-bold text-amber-950">Category-by-category grading</h3>
 					<p class="mt-2 text-amber-900/80">
 						Your report includes before and after assessments across key grading categories, giving you a clear view of how each aspect of the card changed.
 					</p>
 					<div class="mt-4 space-y-3">
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<div class="flex flex-wrap items-center justify-between gap-2">
 								<span class="font-semibold text-amber-950">Surface</span>
 								<div class="flex items-center gap-2 text-sm">
@@ -437,7 +425,7 @@ const year = new Date().getFullYear();
 								</div>
 							</div>
 						</div>
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<div class="flex flex-wrap items-center justify-between gap-2">
 								<span class="font-semibold text-amber-950">Edges</span>
 								<div class="flex items-center gap-2 text-sm">
@@ -449,7 +437,7 @@ const year = new Date().getFullYear();
 								</div>
 							</div>
 						</div>
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<div class="flex flex-wrap items-center justify-between gap-2">
 								<span class="font-semibold text-amber-950">Corners</span>
 								<div class="flex items-center gap-2 text-sm">
@@ -461,7 +449,7 @@ const year = new Date().getFullYear();
 								</div>
 							</div>
 						</div>
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<div class="flex flex-wrap items-center justify-between gap-2">
 								<span class="font-semibold text-amber-950">Centering</span>
 								<div class="flex items-center gap-2 text-sm">
@@ -479,12 +467,12 @@ const year = new Date().getFullYear();
 					</p>
 				</div>
 
-				<div class="mt-6 paper-card rounded-xl p-6">
+				<div class="mt-6 paper-card  p-6">
 					<h3 class="text-lg font-bold text-amber-950">Estimated PSA grade</h3>
 					<p class="mt-2 text-amber-900/80">
 						Based on our inspection and restoration work, we provide an estimated PSA grade range for your card. This estimate is our best professional assessment, but <strong class="font-semibold text-amber-950">we make no guarantee</strong> that PSA or any grading company will assign this grade.
 					</p>
-					<div class="mt-4 rounded-lg border-2 border-amber-400 bg-amber-50/50 p-4">
+					<div class="mt-4  border-2 border-amber-400 bg-amber-50/50 p-4">
 						<p class="text-sm font-medium text-amber-900">
 							<strong class="font-bold text-amber-950">Important:</strong> Grading companies have their own standards and processes. Our estimate is based on common grading criteria, but final grades depend on many factors including the specific grader, current standards, and subjective interpretation. We provide this estimate to help you understand potential outcomes, not as a promise.
 						</p>
@@ -504,7 +492,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 md:grid-cols-3">
-					<figure class="paper-card rounded-xl p-6">
+					<figure class="paper-card  p-6">
 						<blockquote class="text-amber-900/80">
 							“Clear communication the whole way. I got a plan with photos before anything started, and the final report made it easy to see what changed.”
 						</blockquote>
@@ -514,7 +502,7 @@ const year = new Date().getFullYear();
 						</figcaption>
 					</figure>
 
-					<figure class="paper-card rounded-xl p-6">
+					<figure class="paper-card  p-6">
 						<blockquote class="text-amber-900/80">
 							“I appreciated the honesty about risks and grading. They told me what wasn’t worth attempting and focused on safe improvements.”
 						</blockquote>
@@ -524,7 +512,7 @@ const year = new Date().getFullYear();
 						</figcaption>
 					</figure>
 
-					<figure class="paper-card rounded-xl p-6">
+					<figure class="paper-card  p-6">
 						<blockquote class="text-amber-900/80">
 							“Packaging and documentation were excellent. Tracking was shared right away, and the cards came back secured like I’d expect from a collector.”
 						</blockquote>
@@ -544,7 +532,7 @@ const year = new Date().getFullYear();
 					Simple and straightforward. $50 per card, with a 5-card minimum.
 				</p>
 
-				<div class="mt-6 paper-card rounded-xl p-6">
+				<div class="mt-6 paper-card  p-6">
 					<h3 class="text-lg font-bold text-amber-950">Payment + approvals</h3>
 					<p class="mt-2 text-amber-900/80">
 						You receive a written restoration plan first, and <strong class="font-semibold text-amber-950">you approve it before we start any work</strong>.
@@ -565,13 +553,13 @@ const year = new Date().getFullYear();
 					</ul>
 				</div>
 
-				<div class="mt-6 paper-card rounded-xl p-6">
+				<div class="mt-6 paper-card  p-6">
 					<h3 class="text-lg font-bold text-amber-950">Shipping, tracking, and insurance</h3>
 					<p class="mt-2 text-amber-900/80">
 						Shipping is the riskiest part of the entire process. We take a conservative approach, and we recommend you do too.
 					</p>
 					<div class="mt-4 grid gap-4 md:grid-cols-2">
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<p class="font-semibold text-amber-950">Shipping to us</p>
 							<ul class="mt-2 space-y-2 text-sm text-amber-900/80">
 								<li class="flex items-start gap-2">
@@ -588,7 +576,7 @@ const year = new Date().getFullYear();
 								</li>
 							</ul>
 						</div>
-						<div class="rounded-lg border border-amber-200 bg-amber-50/30 p-4">
+						<div class=" border border-amber-200 bg-amber-50/30 p-4">
 							<p class="font-semibold text-amber-950">Return shipping</p>
 							<ul class="mt-2 space-y-2 text-sm text-amber-900/80">
 								<li class="flex items-start gap-2">
@@ -612,13 +600,13 @@ const year = new Date().getFullYear();
 				</div>
 
 				<div class="mt-8 grid gap-6 lg:grid-cols-2">
-					<div class="paper-card-elevated rounded-xl border-2 border-amber-400 p-8">
+					<div class="paper-card-elevated  border-2 border-amber-400 p-8">
 						<div class="flex items-baseline justify-between gap-4">
 							<div>
 								<div class="text-5xl font-bold text-amber-950">$50</div>
 								<div class="mt-1 text-base font-semibold text-amber-900/80">per card</div>
 							</div>
-							<div class="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-900">
+							<div class=" border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-900">
 								Min. 5 cards
 							</div>
 						</div>
@@ -637,7 +625,7 @@ const year = new Date().getFullYear();
 						</p>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">A note about grading</h3>
 						<p class="mt-2 text-amber-900/80">
 							Some cards are damaged in ways that would make meaningful improvement count as <strong class="font-semibold text-amber-950">alteration</strong> under PSA, BGS, or CGC standards. If that applies to your card, we'll tell you before we do anything.
@@ -680,7 +668,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 space-y-4">
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							Do I need to contact you before shipping my cards?
 						</summary>
@@ -689,7 +677,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6" open>
+					<details class="paper-card group  p-6" open>
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							Will this improve my card's grade?
 						</summary>
@@ -698,7 +686,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							When do I pay, and what payment methods do you take?
 						</summary>
@@ -707,7 +695,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							What if I don’t approve the plan?
 						</summary>
@@ -716,7 +704,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							Why do you need at least 5 cards?
 						</summary>
@@ -725,7 +713,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							What if my card is too damaged?
 						</summary>
@@ -734,7 +722,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							How long does it take?
 						</summary>
@@ -743,7 +731,7 @@ const year = new Date().getFullYear();
 						</p>
 					</details>
 
-					<details class="paper-card group rounded-xl p-6">
+					<details class="paper-card group  p-6">
 						<summary class="cursor-pointer list-none text-lg font-bold text-amber-950">
 							What about shipping and insurance?
 						</summary>
@@ -766,7 +754,7 @@ const year = new Date().getFullYear();
 				</p>
 
 				<div class="mt-8 grid gap-6 lg:grid-cols-2">
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">Questions or concerns</h3>
 						<p class="mt-2 text-amber-900/80">
 							Email us within <strong class="font-semibold text-amber-950">48 hours</strong> of delivery with photos and a description of what you’re seeing. We’ll compare against the before/after photos and notes from your report and walk through next steps.
@@ -776,7 +764,7 @@ const year = new Date().getFullYear();
 						</p>
 					</div>
 
-					<div class="paper-card rounded-xl p-6">
+					<div class="paper-card  p-6">
 						<h3 class="text-lg font-bold text-amber-950">Care after restoration</h3>
 						<p class="mt-2 text-amber-900/80">
 							We recommend moving your cards into clean sleeves/holders and avoiding heat, humidity, and pressure. If your report includes specific after-care notes, follow those first.
@@ -791,7 +779,7 @@ const year = new Date().getFullYear();
 
 		<section class="py-12" id="contact">
 			<div class="mx-auto w-full max-w-5xl px-5">
-				<div class="paper-card-elevated rounded-2xl border-2 border-amber-400 p-8 sm:p-10">
+				<div class="paper-card-elevated  border-2 border-amber-400 p-8 sm:p-10">
 					<div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
 						<div>
 							<h2 class="text-3xl font-bold text-amber-950">Ready to send us your cards?</h2>
@@ -799,7 +787,7 @@ const year = new Date().getFullYear();
 								Send us photos and a quick note about what you'd like done. We'll get back to you with what we can help with, what the risks are, and how to proceed.
 							</p>
 
-							<div class="mt-6 paper-card rounded-xl p-6">
+							<div class="mt-6 paper-card  p-6">
 								<h3 class="text-lg font-bold text-amber-950">What to include in your first email</h3>
 								<ul class="mt-3 space-y-2 text-sm text-amber-900/80">
 									<li class="flex items-start gap-2">
@@ -833,13 +821,13 @@ const year = new Date().getFullYear();
 						</div>
 						<div class="flex flex-col gap-3">
 							<a
-								class="inline-flex w-full items-center justify-center rounded-lg border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-md hover:bg-amber-700"
+								class="inline-flex w-full items-center justify-center border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white hover:bg-amber-700"
 								href="mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20send%20some%20cards%20for%20restoration%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
 							>
 								Email us
 							</a>
 							<a
-								class="inline-flex w-full items-center justify-center rounded-lg border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
+								class="inline-flex w-full items-center justify-center  border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100"
 								href="#pricing"
 							>
 								See pricing details
@@ -865,10 +853,10 @@ const year = new Date().getFullYear();
 				<p class="mt-4 text-sm text-amber-900/60">© {year} Ready Set Gem. All rights reserved.</p>
 			</div>
 			<div class="flex flex-wrap items-center gap-2">
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
-				<a class="rounded-lg px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#contact">Contact</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#how-it-works">How It Works</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#pricing">Pricing</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#faq">FAQ</a>
+				<a class=" px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60" href="#contact">Contact</a>
 			</div>
 		</div>
 	</footer>
