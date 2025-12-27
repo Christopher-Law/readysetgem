@@ -31,7 +31,7 @@ export const homeClasses = {
 
 export const homeDerivedClasses = {
   cardP6: `${homeClasses.card} p-6`,
-  heroInner: "p-8 sm:p-12",
+  heroInner: "",
   detailsCard: `${homeClasses.card} group p-6`,
 } as const;
 
