@@ -93,7 +93,7 @@ const faqs = [
 		Skip to content
 	</a>
 
-	<div class="min-h-dvh bg-slate-50 pb-24 text-slate-950 md:pb-0">
+	<div class="min-h-dvh bg-slate-50 pb-[calc(6rem+env(safe-area-inset-bottom))] text-slate-950 md:pb-0">
 		<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur">
 			<div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
 				<a href="/" class="group flex items-center gap-3">
@@ -224,7 +224,7 @@ const faqs = [
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="how-it-works" aria-label="How it works">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-12 sm:py-14" id="how-it-works" aria-label="How it works">
 				<div class="flex flex-wrap items-end justify-between gap-4">
 					<div class="max-w-3xl">
 						<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">How it works</h2>
@@ -252,7 +252,7 @@ const faqs = [
 			</section>
 
 			<section class="scroll-mt-24 border-y border-slate-200 bg-white" id="before-after" aria-label="Before and after photos">
-				<div class="mx-auto w-full max-w-6xl px-5 py-14">
+				<div class="mx-auto w-full max-w-6xl px-5 py-12 sm:py-14">
 					<div class="flex flex-wrap items-end justify-between gap-4">
 						<div>
 							<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Before / After</h2>
@@ -285,19 +285,19 @@ const faqs = [
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="pricing" aria-label="Pricing">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-12 sm:py-14" id="pricing" aria-label="Pricing">
 				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Pricing</h2>
 				<p class="mt-3 max-w-3xl text-slate-700">Simple: $50 per card, with a 5-card minimum.</p>
 
 				<div class="mt-6 grid gap-5 lg:grid-cols-12 lg:items-stretch">
 					<div class="lg:col-span-5 lg:h-full">
 						<div class="rounded-3xl border border-emerald-200 bg-emerald-50/60 p-5 lg:h-full">
-								<div class="flex items-baseline justify-between gap-4">
+								<div class="flex flex-wrap items-end justify-between gap-3">
 									<div>
-										<div class="text-5xl font-black tracking-tight text-slate-950">$50</div>
+										<div class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">$50</div>
 										<div class="mt-1 text-base font-semibold text-slate-700">per card</div>
 									</div>
-									<div class="rounded-full bg-white px-3 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200/80 shadow-sm">Min. 5 cards</div>
+									<div class="whitespace-nowrap rounded-full bg-white px-3 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200/80 shadow-sm">Min. 5 cards</div>
 								</div>
 								<div class="mt-5 space-y-2 text-slate-700">
 									<p class="font-semibold text-slate-950">$50 per card</p>
@@ -366,7 +366,7 @@ const faqs = [
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="faq" aria-label="Common questions">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-12 sm:py-14" id="faq" aria-label="Common questions">
 				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Common questions</h2>
 				<p class="mt-3 max-w-3xl text-slate-700">Straight answers to the things collectors ask before sending photos.</p>
 
@@ -451,7 +451,7 @@ const faqs = [
 
 		<a
 			href={mailtoHref}
-			class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-700 md:hidden"
+			class="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] z-50 inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-700 md:hidden"
 		>
 			Email photos
 		</a>
