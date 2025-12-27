@@ -1,0 +1,76 @@
+---
+import { homeClasses, homeDerivedClasses } from "../../lib/homeClasses";
+
+const { container, h2, lead, detailsSummary } = homeClasses;
+const { detailsCard } = homeDerivedClasses;
+---
+
+<section class="py-12" id="faq">
+  <div class={container}>
+    <h2 class={h2}>Common questions</h2>
+    <p class={lead}>Straight answers to the things collectors usually ask.</p>
+
+    <div class="mt-8 space-y-4">
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>Do I need to contact you before shipping my cards?</summary>
+        <p class="mt-3 text-amber-900/80">
+          Yes. Please email photos first. We’ll confirm if we can take the job, answer questions, and provide the exact shipping address and intake instructions so nothing gets lost or misrouted.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>Will this improve my card's grade?</summary>
+        <p class="mt-3 text-amber-900/80">
+          Maybe, but we don't guarantee it. Some restoration work can be seen as alteration by grading companies, and some damage like creases or ink loss might still be visible. We focus on making your card look better and stay stable, not on trying to improve grades.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>When do I pay, and what payment methods do you take?</summary>
+        <p class="mt-3 text-amber-900/80">
+          You approve the restoration plan first. Payment is due after approval and before work begins. We include payment options with your invoice so you can choose the method that’s easiest for you.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>What if I don’t approve the plan?</summary>
+        <p class="mt-3 text-amber-900/80">
+          That’s fine. We’ll return your cards safely. Return shipping is billed at cost with tracking. Any inspection/handling fees (if applicable) are disclosed before you ship to us so you can decide with full information.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>Why do you need at least 5 cards?</summary>
+        <p class="mt-3 text-amber-900/80">
+          Proper inspection and documentation take time. A <strong class="font-semibold text-amber-950">5-card minimum</strong>
+          keeps the process efficient and the per-card price fair. If you have fewer cards, contact us and we can discuss pricing.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>What if my card is too damaged?</summary>
+        <p class="mt-3 text-amber-900/80">
+          We'll tell you. If a card has severe stock separation, mold risk, heavy water damage, or if fixing it would require work that counts as alteration, we'll recommend against restoration. We'd rather be honest than risk making things worse.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>How long does it take?</summary>
+        <p class="mt-3 text-amber-900/80">
+          We expect <strong class="font-semibold text-amber-950">7–14 days</strong>, but turnaround could be longer based on our queue, how many cards you send, and the damage on each card. More complex work or larger orders may require additional time.
+        </p>
+      </details>
+
+      <details class={detailsCard}>
+        <summary class={detailsSummary}>What about shipping and insurance?</summary>
+        <p class="mt-3 text-amber-900/80">
+          We recommend tracked shipping both ways. You typically pay for sending cards to us; we bill return shipping at cost with tracking. Insurance is available for return shipping if you want it. Restoration always has some risk. That's why we document everything and get your approval first.
+        </p>
+        <p class="mt-3 text-amber-900/80">
+          If you’re shipping higher-value cards, consider insurance and signature on delivery. If you have a preferred carrier or service level, mention it in your email and we’ll do our best to accommodate.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+

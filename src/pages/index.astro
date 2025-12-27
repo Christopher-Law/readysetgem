@@ -1,191 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/home/SiteHeader.astro";
+import Hero from "../components/home/Hero.astro";
+import SectionGettingStarted from "../components/home/SectionGettingStarted.astro";
+import SectionPricing from "../components/home/SectionPricing.astro";
+import SectionFAQ from "../components/home/SectionFAQ.astro";
+import SectionContact from "../components/home/SectionContact.astro";
+import SiteFooter from "../components/home/SiteFooter.astro";
 
-const year = new Date().getFullYear();
+import { homeClasses, homeDerivedClasses } from "../lib/homeClasses";
 
-const container = "mx-auto w-full max-w-5xl px-5";
+const {
+	container,
+	h2,
+	lead,
+	navLink,
+	btnPrimary,
+	btnSecondary,
+	card,
+	panelP4,
+	bulletItem,
+	dotAmber,
+	dotAmberDark,
+	stepBadge,
+} = homeClasses;
 
-const h2 = "text-3xl font-bold text-amber-950";
-const lead = "mt-3 text-lg text-amber-900/80";
-
-const navLink = "px-3 py-2 text-sm font-medium text-amber-900/80 hover:bg-amber-100/60";
-
-const btnPrimary =
-	"inline-flex items-center justify-center border-2 border-amber-700 bg-amber-600 px-6 py-3 text-base font-bold text-white hover:bg-amber-700";
-const btnPrimaryHeader =
-	"ml-1 border-2 border-amber-700 bg-amber-600 px-4 py-2 text-sm font-bold text-white hover:bg-amber-700";
-const btnPrimaryHeaderMobile =
-	"border-2 border-amber-700 bg-amber-600 px-3 py-2 text-sm font-bold text-white hover:bg-amber-700";
-const btnSecondary =
-	"inline-flex items-center justify-center border-2 border-amber-300 bg-amber-50 px-6 py-3 text-base font-semibold text-amber-900 hover:bg-amber-100";
-
-const card = "paper-card";
-const cardP6 = `${card} p-6`;
-const cardElevated = "paper-card-elevated";
-const cardElevatedTexture = `${cardElevated} paper-texture p-8 sm:p-12`;
-
-const panelP4 = "paper-panel p-4";
-
-const bulletItem = "flex items-start gap-2";
-const dotAmber = "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600";
-const dotAmberDark = "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-800";
-
-const detailsCard = `${card} group p-6`;
-const detailsSummary = "cursor-pointer list-none text-lg font-bold text-amber-950";
-
-const stepBadge =
-	"flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-600 bg-amber-50 text-sm font-bold text-amber-900";
+const { cardP6, detailsCard } = homeDerivedClasses;
 ---
 
 <Layout
 	title="Ready Set Gem - Card Restoration"
 	description="Trading card restoration service. We carefully restore your cards with detailed inspection and honest communication. Based in Kingston, Ontario."
 >
-	<a
-		href="#main"
-		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 border border-amber-600 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-900"
-	>
-		Skip to content
-	</a>
-
-	<header class="sticky top-0 z-40 border-b border-amber-200/60 bg-amber-50/80 backdrop-blur-sm">
-		<div class={`${container} flex items-center justify-between py-4`}>
-			<a href="/" class="group flex items-center gap-2.5 font-bold tracking-tight text-amber-900">
-				<svg
-					aria-hidden="true"
-					viewBox="0 0 24 24"
-					class="h-5 w-5"
-					fill="none"
-				>
-					<path
-						d="M7.2 4.5h9.6l3.2 4.2L12 20.5 4 8.7 7.2 4.5Z"
-						fill="rgb(254 243 199)"
-						stroke="rgb(180 83 9)"
-						stroke-width="2"
-						stroke-linejoin="round"
-					/>
-					<path
-						d="M4 8.7h16M12 20.5 9.1 8.7 12 4.5l2.9 4.2L12 20.5Z"
-						stroke="rgb(180 83 9)"
-						stroke-width="1.5"
-						stroke-linejoin="round"
-						opacity="0.9"
-					/>
-				</svg>
-				<span class="text-base sm:text-lg">Ready Set Gem</span>
-			</a>
-
-			<nav class="hidden items-center gap-2 sm:flex" aria-label="Primary">
-				<a class={navLink} href="#how-it-works">How It Works</a>
-				<a class={navLink} href="#pricing">Pricing</a>
-				<a class={navLink} href="#faq">FAQ</a>
-				<a
-					class={btnPrimaryHeader}
-					href="#contact"
-				>
-					Get Started
-				</a>
-			</nav>
-
-			<a
-				class={`sm:hidden ${btnPrimaryHeaderMobile}`}
-				href="#contact"
-			>
-				Get Started
-			</a>
-		</div>
-	</header>
+	<SiteHeader />
 
 	<main id="main">
-		<section class="relative overflow-hidden py-12 sm:py-16">
-			<div class={container}>
-				<div class={cardElevatedTexture}>
-					<p class="text-sm font-semibold text-amber-800">
-						Serving collectors across North America
-					</p>
-					<h1 class="mt-4 text-4xl font-bold leading-tight text-amber-950 sm:text-5xl">
-						We Restore Trading Cards
-					</h1>
-					<p class="mt-5 max-w-2xl text-lg leading-relaxed text-amber-900/90 sm:text-xl">
-						Whether it's a childhood favorite that got a little rough, or something you picked up that needs attention, we take the time to understand what's happening with your card before we do anything.
-					</p>
+		<Hero />
 
-					<div class="mt-8 flex flex-wrap items-center gap-3">
-						<a
-							class={btnPrimary}
-							href="#contact"
-						>
-							Send us your cards
-						</a>
-						<a
-							class={btnSecondary}
-							href="#how-it-works"
-						>
-							Learn how it works
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="py-12" id="getting-started" aria-label="Getting started">
-			<div class={container}>
-				<h2 class={h2}>Getting started</h2>
-				<p class={lead}>
-					If you’re a collector sending valuable cards, the main question is “what happens before I ship anything?” This is the flow from first message to cards back in hand.
-				</p>
-
-				<div class="mt-8 grid gap-6 lg:grid-cols-3">
-					<div class={cardP6}>
-						<h3 class="text-lg font-bold text-amber-950">1) Email photos first</h3>
-						<p class="mt-2 text-amber-900/80">
-							Send a few clear photos and a short description of the damage and your goal (display, collection, or grading). We’ll reply with next steps and whether restoration looks realistic.
-						</p>
-						<ul class="mt-4 space-y-2 text-sm text-amber-900/80">
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Front + back, straight-on</span>
-							</li>
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Close-ups of bends/creases/edge issues</span>
-							</li>
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Any prior damage notes (water, smoke, adhesive, etc.)</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class={cardP6}>
-						<h3 class="text-lg font-bold text-amber-950">2) We send shipping instructions</h3>
-						<p class="mt-2 text-amber-900/80">
-							After we review your photos, we’ll confirm if we can take the job and share the exact shipping address and packing checklist. This prevents surprise shipments and reduces risk in transit.
-						</p>
-						<p class="mt-4 text-sm text-amber-900/70">
-							We strongly recommend tracked shipping. For higher-value cards, consider insurance and signature on delivery.
-						</p>
-					</div>
-
-					<div class={cardP6}>
-						<h3 class="text-lg font-bold text-amber-950">3) Inspection → plan → approval</h3>
-						<p class="mt-2 text-amber-900/80">
-							Once your cards arrive, we do a close inspection and send a restoration plan with risks and recommendations. <strong class="font-semibold text-amber-950">No work starts until you approve</strong>.
-						</p>
-						<p class="mt-4 text-sm text-amber-900/70">
-							If you decide not to proceed, we can return your cards. Details are shared with your plan so you can make a clear call.
-						</p>
-					</div>
-				</div>
-
-				<div class={`mt-6 ${cardP6}`}>
-					<h3 class="text-lg font-bold text-amber-950">Typical response time</h3>
-					<p class="mt-2 text-amber-900/80">
-						We reply to new requests within <strong class="font-semibold text-amber-950">1–2 business days</strong>. If you have a deadline (event, gift, show), mention it in your email and we’ll tell you what’s realistic.
-					</p>
-				</div>
-			</div>
-		</section>
+		<SectionGettingStarted />
 
 		<section class="py-12" id="how-it-works" aria-label="How it works">
 			<div class={container}>
@@ -575,226 +427,9 @@ const stepBadge =
 			</div>
 		</section>
 
-		<section class="py-12" id="pricing">
-			<div class={container}>
-				<h2 class={h2}>Pricing</h2>
-				<p class={lead}>
-					Simple and straightforward. $50 per card, with a 5-card minimum.
-				</p>
+		<SectionPricing />
 
-				<div class={`mt-6 ${cardP6}`}>
-					<h3 class="text-lg font-bold text-amber-950">Payment + approvals</h3>
-					<p class="mt-2 text-amber-900/80">
-						You receive a written restoration plan first, and <strong class="font-semibold text-amber-950">you approve it before we start any work</strong>.
-					</p>
-					<ul class="mt-4 space-y-2 text-sm text-amber-900/80">
-						<li class={bulletItem}>
-							<span class={dotAmber}></span>
-							<span><strong class="font-semibold text-amber-950">When you pay:</strong> after you approve the plan and before restoration begins.</span>
-						</li>
-						<li class={bulletItem}>
-							<span class={dotAmber}></span>
-							<span><strong class="font-semibold text-amber-950">How you pay:</strong> we’ll include payment options in your plan/invoice so you can choose the easiest method.</span>
-						</li>
-						<li class={bulletItem}>
-							<span class={dotAmber}></span>
-							<span><strong class="font-semibold text-amber-950">If you decline:</strong> we’ll return your cards. You cover return shipping; any inspection/handling fees (if applicable) are disclosed before you ship to us so there are no surprises.</span>
-						</li>
-					</ul>
-				</div>
-
-				<div class={`mt-6 ${cardP6}`}>
-					<h3 class="text-lg font-bold text-amber-950">Shipping, tracking, and insurance</h3>
-					<p class="mt-2 text-amber-900/80">
-						Shipping is the riskiest part of the entire process. We take a conservative approach, and we recommend you do too.
-					</p>
-					<div class="mt-4 grid gap-4 md:grid-cols-2">
-						<div class={panelP4}>
-							<p class="font-semibold text-amber-950">Shipping to us</p>
-							<ul class="mt-2 space-y-2 text-sm text-amber-900/80">
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>We recommend <strong class="font-semibold text-amber-950">tracked</strong> shipping and strong packaging.</span>
-								</li>
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>For high-value cards, consider <strong class="font-semibold text-amber-950">insurance</strong> and signature on delivery.</span>
-								</li>
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>We’ll confirm the shipping address and intake details by email before you send anything.</span>
-								</li>
-							</ul>
-						</div>
-						<div class={panelP4}>
-							<p class="font-semibold text-amber-950">Return shipping</p>
-							<ul class="mt-2 space-y-2 text-sm text-amber-900/80">
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>Return shipping is billed <strong class="font-semibold text-amber-950">at cost</strong> with tracking.</span>
-								</li>
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>We can add insurance/signature if you want. Tell us your preference.</span>
-								</li>
-								<li class={bulletItem}>
-									<span class={dotAmber}></span>
-									<span>We send tracking as soon as your package ships.</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<p class="mt-4 text-sm text-amber-900/70">
-						Carrier availability varies by destination. If you have a preferred carrier/service level, include it in your initial email.
-					</p>
-				</div>
-
-				<div class="mt-8 grid gap-6 lg:grid-cols-2">
-					<div class={`${cardElevated} p-8 ring-1 ring-amber-300/60`}>
-						<div class="flex items-baseline justify-between gap-4">
-							<div>
-								<div class="text-5xl font-bold text-amber-950">$50</div>
-								<div class="mt-1 text-base font-semibold text-amber-900/80">per card</div>
-							</div>
-							<div class="paper-panel px-3 py-2 text-sm font-bold text-amber-900">
-								Min. 5 cards
-							</div>
-						</div>
-						<div class="mt-6 space-y-2 text-amber-900/80">
-							<p class="font-semibold">What's included:</p>
-							<ul class="ml-4 list-disc space-y-1.5">
-								<li>Detailed inspection with magnification and UV light</li>
-								<li>Condition report and restoration plan</li>
-								<li>Your approval before work begins</li>
-								<li>Before and after photos</li>
-								<li>Secure return packaging</li>
-							</ul>
-						</div>
-						<p class="mt-6 text-sm text-amber-900/70">
-							Shipping isn't included. You typically pay for sending cards to us; we bill return shipping at cost with tracking. Insurance is available if you want it.
-						</p>
-					</div>
-
-					<div class={cardP6}>
-						<h3 class="text-lg font-bold text-amber-950">A note about grading</h3>
-						<p class="mt-2 text-amber-900/80">
-							Some cards are damaged in ways that would make meaningful improvement count as <strong class="font-semibold text-amber-950">alteration</strong> under PSA, BGS, or CGC standards. If that applies to your card, we'll tell you before we do anything.
-						</p>
-						<p class="mt-3 text-sm text-amber-900/70">
-							This service works best for collectors who want to preserve and display cards that got damaged. We don't promise grade improvements.
-						</p>
-
-						<div class="my-6 h-px bg-amber-200"></div>
-
-						<h3 class="text-lg font-bold text-amber-950">How to pack your cards</h3>
-						<ul class="mt-3 space-y-2 text-sm text-amber-900/80">
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Penny sleeve plus semi-rigid holder like a Card Saver, or toploader</span>
-							</li>
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Team bag with no adhesive touching the card</span>
-							</li>
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Bubble wrap + sturdy box</span>
-							</li>
-							<li class={bulletItem}>
-								<span class={dotAmber}></span>
-								<span>Include a list of cards and your contact info</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="py-12" id="faq">
-			<div class={container}>
-				<h2 class={h2}>Common questions</h2>
-				<p class={lead}>
-					Straight answers to the things collectors usually ask.
-				</p>
-
-				<div class="mt-8 space-y-4">
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							Do I need to contact you before shipping my cards?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							Yes. Please email photos first. We’ll confirm if we can take the job, answer questions, and provide the exact shipping address and intake instructions so nothing gets lost or misrouted.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							Will this improve my card's grade?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							Maybe, but we don't guarantee it. Some restoration work can be seen as alteration by grading companies, and some damage like creases or ink loss might still be visible. We focus on making your card look better and stay stable, not on trying to improve grades.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							When do I pay, and what payment methods do you take?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							You approve the restoration plan first. Payment is due after approval and before work begins. We include payment options with your invoice so you can choose the method that’s easiest for you.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							What if I don’t approve the plan?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							That’s fine. We’ll return your cards safely. Return shipping is billed at cost with tracking. Any inspection/handling fees (if applicable) are disclosed before you ship to us so you can decide with full information.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							Why do you need at least 5 cards?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							Proper inspection and documentation take time. A <strong class="font-semibold text-amber-950">5-card minimum</strong> keeps the process efficient and the per-card price fair. If you have fewer cards, contact us and we can discuss pricing.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							What if my card is too damaged?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							We'll tell you. If a card has severe stock separation, mold risk, heavy water damage, or if fixing it would require work that counts as alteration, we'll recommend against restoration. We'd rather be honest than risk making things worse.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							How long does it take?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							We expect <strong class="font-semibold text-amber-950">7–14 days</strong>, but turnaround could be longer based on our queue, how many cards you send, and the damage on each card. More complex work or larger orders may require additional time.
-						</p>
-					</details>
-
-					<details class={detailsCard}>
-						<summary class={detailsSummary}>
-							What about shipping and insurance?
-						</summary>
-						<p class="mt-3 text-amber-900/80">
-							We recommend tracked shipping both ways. You typically pay for sending cards to us; we bill return shipping at cost with tracking. Insurance is available for return shipping if you want it. Restoration always has some risk. That's why we document everything and get your approval first.
-						</p>
-						<p class="mt-3 text-amber-900/80">
-							If you’re shipping higher-value cards, consider insurance and signature on delivery. If you have a preferred carrier or service level, mention it in your email and we’ll do our best to accommodate.
-						</p>
-					</details>
-				</div>
-			</div>
-		</section>
+		<SectionFAQ />
 
 		<section class="py-12" id="after-return" aria-label="After your cards come back">
 			<div class={container}>
@@ -827,104 +462,8 @@ const stepBadge =
 			</div>
 		</section>
 
-		<section class="py-12" id="contact">
-			<div class={container}>
-				<div class={`${cardElevated} p-8 sm:p-10 ring-1 ring-amber-300/60`}>
-					<div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
-						<div>
-							<h2 class={h2}>Ready to send us your cards?</h2>
-							<p class={lead}>
-								Send us photos and a quick note about what you'd like done. We'll get back to you with what we can help with, what the risks are, and how to proceed.
-							</p>
-
-							<div class={`mt-6 ${cardP6}`}>
-								<h3 class="text-lg font-bold text-amber-950">What to include in your first email</h3>
-								<ul class="mt-3 space-y-2 text-sm text-amber-900/80">
-									<li class={bulletItem}>
-										<span class={dotAmber}></span>
-										<span><strong class="font-semibold text-amber-950">Photos:</strong> front + back, plus close-ups of the damage (bends, creases, dents, edge wear, lifting).</span>
-									</li>
-									<li class={bulletItem}>
-										<span class={dotAmber}></span>
-										<span><strong class="font-semibold text-amber-950">Card list:</strong> game/set (if known) and how many cards you’re sending.</span>
-									</li>
-									<li class={bulletItem}>
-										<span class={dotAmber}></span>
-										<span><strong class="font-semibold text-amber-950">Goal:</strong> display, collection preservation, or grading-focused.</span>
-									</li>
-									<li class={bulletItem}>
-										<span class={dotAmber}></span>
-										<span><strong class="font-semibold text-amber-950">Any risks:</strong> water exposure, mold smell, smoke, adhesive, or prior attempts to fix.</span>
-									</li>
-								</ul>
-								<p class="mt-4 text-sm text-amber-900/70">
-									We reply within <strong class="font-semibold text-amber-950">1–2 business days</strong>. If you have a deadline, mention it and we’ll be honest about timing.
-								</p>
-							</div>
-
-							<div class="mt-6 space-y-2 text-amber-900/80">
-								<p><strong class="font-semibold text-amber-950">Location:</strong> Kingston, Ontario, Canada</p>
-								<p><strong class="font-semibold text-amber-950">Service area:</strong> North America</p>
-								<p><strong class="font-semibold text-amber-950">Pricing:</strong> $50 per card, minimum 5</p>
-								<p><strong class="font-semibold text-amber-950">Turnaround:</strong> 7–14 days expected, may be longer based on queue, number of cards, and damage level</p>
-							</div>
-						</div>
-						<div class="flex flex-col gap-3">
-							<a
-								class={`${btnPrimary} w-full`}
-								href="mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20send%20some%20cards%20for%20restoration%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
-							>
-								Email us
-							</a>
-							<a
-								class={`${btnSecondary} w-full`}
-								href="#pricing"
-							>
-								See pricing details
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<SectionContact />
 	</main>
 
-	<footer class="border-t border-amber-200/60 bg-amber-50/40 py-10">
-		<div class={`${container} flex flex-col justify-between gap-6 md:flex-row`}>
-			<div>
-				<div class="flex items-center gap-2.5 font-bold tracking-tight text-amber-950">
-					<svg
-						aria-hidden="true"
-						viewBox="0 0 24 24"
-						class="h-5 w-5"
-						fill="none"
-					>
-						<path
-							d="M7.2 4.5h9.6l3.2 4.2L12 20.5 4 8.7 7.2 4.5Z"
-							fill="rgb(254 243 199)"
-							stroke="rgb(180 83 9)"
-							stroke-width="2"
-							stroke-linejoin="round"
-						/>
-						<path
-							d="M4 8.7h16M12 20.5 9.1 8.7 12 4.5l2.9 4.2L12 20.5Z"
-							stroke="rgb(180 83 9)"
-							stroke-width="1.5"
-							stroke-linejoin="round"
-							opacity="0.9"
-						/>
-					</svg>
-					<span>Ready Set Gem</span>
-				</div>
-				<p class="mt-2 text-amber-900/70">Trading card restoration based in Kingston, Ontario, serving North America.</p>
-				<p class="mt-4 text-sm text-amber-900/60">© {year} Ready Set Gem. All rights reserved.</p>
-			</div>
-			<div class="flex flex-wrap items-center gap-2">
-				<a class={navLink} href="#how-it-works">How It Works</a>
-				<a class={navLink} href="#pricing">Pricing</a>
-				<a class={navLink} href="#faq">FAQ</a>
-				<a class={navLink} href="#contact">Contact</a>
-			</div>
-		</div>
-	</footer>
+	<SiteFooter />
 </Layout>

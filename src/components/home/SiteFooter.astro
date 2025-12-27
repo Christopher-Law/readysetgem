@@ -1,0 +1,43 @@
+---
+import { homeClasses } from "../../lib/homeClasses";
+
+const { container, navLink } = homeClasses;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-amber-200/60 bg-amber-50/40 py-10">
+  <div class={`${container} flex flex-col justify-between gap-6 md:flex-row`}>
+    <div>
+      <div class="flex items-center gap-2.5 font-bold tracking-tight text-amber-950">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5" fill="none">
+          <path
+            d="M7.2 4.5h9.6l3.2 4.2L12 20.5 4 8.7 7.2 4.5Z"
+            fill="rgb(254 243 199)"
+            stroke="rgb(180 83 9)"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 8.7h16M12 20.5 9.1 8.7 12 4.5l2.9 4.2L12 20.5Z"
+            stroke="rgb(180 83 9)"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+            opacity="0.9"
+          />
+        </svg>
+        <span>Ready Set Gem</span>
+      </div>
+      <p class="mt-2 text-amber-900/70">
+        Trading card restoration based in Kingston, Ontario, serving North America.
+      </p>
+      <p class="mt-4 text-sm text-amber-900/60">© {year} Ready Set Gem. All rights reserved.</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <a class={navLink} href="#how-it-works">How It Works</a>
+      <a class={navLink} href="#pricing">Pricing</a>
+      <a class={navLink} href="#faq">FAQ</a>
+      <a class={navLink} href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
