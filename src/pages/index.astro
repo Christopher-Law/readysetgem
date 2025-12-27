@@ -24,7 +24,7 @@ const howItWorks = [
 	{
 		n: "03",
 		title: "You approve, then you ship",
-		body: "No work starts until you approve in writing. After approval, we send the shipping address and packing notes.",
+		body: "No work starts until you approve in writing. After approval, we send the shipping address and packing notes. When your cards arrive, we confirm intake and send your invoice. Restoration begins after payment.",
 	},
 ] as const;
 
@@ -36,11 +36,6 @@ const faqs = [
 	{
 		q: "How much does it cost?",
 		a: "It’s $50 per card with a 5-card minimum. Shipping isn’t included; return shipping is billed at cost with tracking.",
-	},
-	{
-		q: "What’s included in the $50 per card?",
-		a: "Typically includes:",
-		bullets: ["Careful inspection", "A written plan before any work starts", "Your approval before work begins", "Before/after photos", "Secure return packaging"],
 	},
 	{
 		q: "Will this improve my card’s grade?",
@@ -72,7 +67,7 @@ const faqs = [
 	},
 	{
 		q: "What do you mean by restoration vs alteration?",
-		a: "We restore, we don’t alter. If a job would likely be flagged as alteration by grading standards, we’ll tell you upfront and recommend against it.",
+		a: "We restore, we don’t alter. If a job may be considered alteration by some grading companies or policies, we’ll tell you upfront and recommend against it.",
 	},
 	{
 		q: "How should I pack my cards for shipping?",
@@ -162,6 +157,9 @@ const faqs = [
 							<p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700 sm:text-xl">
 								Start with photos and a quick note. We’ll tell you what’s realistic, what the risks are, and what we’d recommend—before you ship anything.
 							</p>
+							<p class="mt-3 max-w-2xl text-sm font-semibold text-slate-600">
+								No obligation—photos are just for an honest assessment.
+							</p>
 
 							<div class="mt-8 flex flex-wrap items-center gap-3">
 								<a
@@ -248,7 +246,7 @@ const faqs = [
 				<div class="mt-6 rounded-3xl border border-emerald-200 bg-emerald-50/60 p-6">
 					<h3 class="text-lg font-bold text-slate-950">Quick note on restoration</h3>
 					<p class="mt-2 text-sm leading-relaxed text-slate-700">
-						We focus on careful restoration—not alteration. If a job would likely be flagged as alteration, we’ll tell you before anything starts.
+						We focus on careful restoration—not alteration. If a job may be considered alteration by some grading companies or policies, we’ll tell you before anything starts.
 					</p>
 				</div>
 			</section>
@@ -292,6 +290,49 @@ const faqs = [
 				<p class="mt-3 max-w-3xl text-slate-700">Simple: $50 per card, with a 5-card minimum.</p>
 
 				<div class="mt-6 grid gap-5 lg:grid-cols-12">
+					<div class="lg:col-span-5">
+						<div class="rounded-3xl border border-emerald-200 bg-emerald-50/60 p-5">
+								<div class="flex items-baseline justify-between gap-4">
+									<div>
+										<div class="text-5xl font-black tracking-tight text-slate-950">$50</div>
+										<div class="mt-1 text-base font-semibold text-slate-700">per card</div>
+									</div>
+									<div class="rounded-full bg-white px-3 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200/80 shadow-sm">Min. 5 cards</div>
+								</div>
+								<div class="mt-5 space-y-2 text-slate-700">
+									<p class="font-semibold text-slate-950">$50 per card</p>
+								</div>
+								<p class="mt-2 text-xs leading-relaxed text-slate-600">5-card minimum. Shipping billed separately.</p>
+
+								<div class="mt-4 border-t border-emerald-200/70 pt-3">
+									<p class="text-sm font-bold text-slate-950">What’s included</p>
+									<ul class="mt-3 space-y-1 text-sm text-slate-700">
+										<li class="flex items-start gap-2">
+											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+											<span>Careful inspection</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+											<span>A written plan before any work starts</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+											<span>Your approval before work begins</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+											<span>Before/after photos</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+											<span>Secure return packaging</span>
+										</li>
+									</ul>
+								</div>
+						</div>
+
+					</div>
+
 					<div class="lg:col-span-7">
 						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
 							<h3 class="text-lg font-bold text-slate-950">Approvals + payment</h3>
@@ -301,7 +342,9 @@ const faqs = [
 							<ul class="mt-4 space-y-2 text-sm text-slate-700">
 								<li class="flex items-start gap-2">
 									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span><strong class="font-semibold text-slate-950">When you pay:</strong> after you approve the plan and before restoration begins.</span>
+									<span
+										><strong class="font-semibold text-slate-950">When you pay:</strong> after you approve the plan and after we receive your cards (intake confirmed), before restoration begins.</span
+									>
 								</li>
 								<li class="flex items-start gap-2">
 									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
@@ -319,23 +362,6 @@ const faqs = [
 								We’ll provide the exact shipping address after we review your photos and you approve the plan.
 							</p>
 						</div>
-					</div>
-
-					<div class="lg:col-span-5">
-						<div class="rounded-3xl border border-emerald-200 bg-emerald-50/60 p-7">
-								<div class="flex items-baseline justify-between gap-4">
-									<div>
-										<div class="text-5xl font-black tracking-tight text-slate-950">$50</div>
-										<div class="mt-1 text-base font-semibold text-slate-700">per card</div>
-									</div>
-									<div class="rounded-full bg-white px-3 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200/80 shadow-sm">Min. 5 cards</div>
-								</div>
-								<div class="mt-6 space-y-2 text-slate-700">
-									<p class="font-semibold text-slate-950">$50 per card</p>
-								</div>
-								<p class="mt-2 text-xs leading-relaxed text-slate-600">5-card minimum. Shipping billed separately.</p>
-						</div>
-
 					</div>
 				</div>
 			</section>
