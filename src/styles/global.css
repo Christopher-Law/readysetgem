@@ -45,13 +45,27 @@
 
 @layer utilities {
   .paper-card {
-    background: var(--paper-warm);
-    border: 1px solid var(--border-warm);
+    background:
+      radial-gradient(circle at 25% 15%, rgba(217, 119, 6, 0.06), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(180, 83, 9, 0.04), transparent 60%),
+      var(--paper-warm);
+    border: 1px solid rgba(212, 196, 168, 0.4);
+    border-radius: 18px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 1px 0 rgba(44, 36, 22, 0.03);
   }
 
   .paper-card-elevated {
-    background: var(--paper-warm);
-    border: 1px solid var(--border-warm);
+    background:
+      radial-gradient(circle at 25% 15%, rgba(217, 119, 6, 0.08), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(180, 83, 9, 0.05), transparent 60%),
+      var(--paper-warm);
+    border: 1px solid rgba(212, 196, 168, 0.5);
+    border-radius: 22px;
+    box-shadow:
+      0 2px 0 rgba(44, 36, 22, 0.04),
+      0 18px 44px rgba(44, 36, 22, 0.09);
   }
 
   .paper-texture {
@@ -63,6 +77,12 @@
         rgba(212, 196, 168, 0.02) 35px,
         rgba(212, 196, 168, 0.02) 70px
       );
+  }
+
+  .paper-panel {
+    background: rgba(254, 243, 199, 0.35);
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(212, 196, 168, 0.45);
   }
 
   .hobby-accent {
