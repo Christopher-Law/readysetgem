@@ -1,7 +1,7 @@
 ---
 import { homeClasses, homeDerivedClasses } from "../../lib/homeClasses";
 
-const { container, h2, lead, cardElevated, btnPrimary, btnSecondary, bulletItem, dotAmber } =
+const { container, h2, lead, cardElevated, btnPrimary, btnSecondary, panelP4, bulletItem, dotAmber } =
   homeClasses;
 const { cardP6 } = homeDerivedClasses;
 ---
@@ -9,58 +9,88 @@ const { cardP6 } = homeDerivedClasses;
 <section class="py-12" id="contact">
   <div class={container}>
     <div class={`${cardElevated} p-8 sm:p-10 ring-1 ring-amber-300/60`}>
-      <div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
-        <div>
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
+        <div class="min-w-0">
           <h2 class={h2}>Ready to get your cards fixed?</h2>
           <p class={lead}>
             Start with photos and a quick note about what you'd like done. We'll reply with what we can
             help with, what the risks are, and how to proceed.
           </p>
 
-          <div class={`mt-6 ${cardP6}`}>
-            <h3 class="text-lg font-bold text-amber-950">What to include in your first email</h3>
-            <ul class="mt-3 space-y-2 text-sm text-amber-900/80">
-              <li class={bulletItem}>
-                <span class={dotAmber}></span>
-                <span><strong class="font-semibold text-amber-950">Photos:</strong> front + back, plus close-ups of the damage (bends, creases, dents, edge wear, lifting).</span>
-              </li>
-              <li class={bulletItem}>
-                <span class={dotAmber}></span>
-                <span><strong class="font-semibold text-amber-950">Card list:</strong> game/set (if known) and how many cards you’d like restored.</span>
-              </li>
-              <li class={bulletItem}>
-                <span class={dotAmber}></span>
-                <span><strong class="font-semibold text-amber-950">Goal:</strong> display, collection preservation, or grading-focused.</span>
-              </li>
-              <li class={bulletItem}>
-                <span class={dotAmber}></span>
-                <span><strong class="font-semibold text-amber-950">Any risks:</strong> water exposure, mold smell, smoke, adhesive, or prior attempts to fix.</span>
-              </li>
-            </ul>
-            <p class="mt-4 text-sm text-amber-900/70">
-              We reply within <strong class="font-semibold text-amber-950">1–2 business days</strong>.
-              If you have a deadline, mention it and we’ll be honest about timing.
-            </p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              class={btnPrimary}
+              href="mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
+            >
+              Get my cards fixed
+            </a>
+            <a class={btnSecondary} href="#pricing">See pricing details</a>
           </div>
 
-          <div class="mt-6 space-y-2 text-amber-900/80">
-            <p><strong class="font-semibold text-amber-950">Location:</strong> Kingston, Ontario, Canada</p>
-            <p><strong class="font-semibold text-amber-950">Service area:</strong> North America</p>
-            <p><strong class="font-semibold text-amber-950">Pricing:</strong> $50 per card, minimum 5</p>
-            <p>
-              <strong class="font-semibold text-amber-950">Turnaround:</strong> 7–14 days expected, may be longer based on queue, number of cards, and damage level
-            </p>
-          </div>
+          <p class="mt-4 text-sm text-amber-900/70">
+            We reply within <strong class="font-semibold text-amber-950">1–2 business days</strong>.
+            If you have a deadline, mention it and we’ll be honest about timing.
+          </p>
         </div>
 
-        <div class="flex flex-col gap-3">
-          <a
-            class={`${btnPrimary} w-full`}
-            href="mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!"
-          >
-            Get my cards fixed
-          </a>
-          <a class={`${btnSecondary} w-full`} href="#pricing">See pricing details</a>
+        <div class={cardP6}>
+          <h3 class="text-lg font-bold text-amber-950">At a glance</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <div class={panelP4}>
+              <p class="text-sm font-semibold text-amber-900">Location</p>
+              <p class="mt-1 text-sm text-amber-900/80">Kingston, Ontario, Canada</p>
+            </div>
+            <div class={panelP4}>
+              <p class="text-sm font-semibold text-amber-900">Service area</p>
+              <p class="mt-1 text-sm text-amber-900/80">North America</p>
+            </div>
+            <div class={panelP4}>
+              <p class="text-sm font-semibold text-amber-900">Pricing</p>
+              <p class="mt-1 text-sm text-amber-900/80">$50 per card, minimum 5</p>
+            </div>
+            <div class={panelP4}>
+              <p class="text-sm font-semibold text-amber-900">Turnaround</p>
+              <p class="mt-1 text-sm text-amber-900/80">
+                7–14 days expected, may be longer based on queue, number of cards, and damage level
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <div class={cardP6}>
+          <h3 class="text-lg font-bold text-amber-950">What to include in your first email</h3>
+          <div class="mt-4 grid gap-3 md:grid-cols-2">
+            <div class={bulletItem}>
+              <span class={dotAmber}></span>
+              <span class="text-sm text-amber-900/80">
+                <strong class="font-semibold text-amber-950">Photos:</strong> front + back, plus close-ups
+                of the damage (bends, creases, dents, edge wear, lifting).
+              </span>
+            </div>
+            <div class={bulletItem}>
+              <span class={dotAmber}></span>
+              <span class="text-sm text-amber-900/80">
+                <strong class="font-semibold text-amber-950">Card list:</strong> game/set (if known) and
+                how many cards you’d like restored.
+              </span>
+            </div>
+            <div class={bulletItem}>
+              <span class={dotAmber}></span>
+              <span class="text-sm text-amber-900/80">
+                <strong class="font-semibold text-amber-950">Goal:</strong> display, collection
+                preservation, or grading-focused.
+              </span>
+            </div>
+            <div class={bulletItem}>
+              <span class={dotAmber}></span>
+              <span class="text-sm text-amber-900/80">
+                <strong class="font-semibold text-amber-950">Any risks:</strong> water exposure, mold
+                smell, smoke, adhesive, or prior attempts to fix.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
