@@ -9,6 +9,51 @@ const socials = [
 
 const mailtoHref =
 	"mailto:hello@readysetgem.ca?subject=Card%20Restoration%20Request&body=Hi%20Ready%20Set%20Gem%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!";
+
+const howItWorks = [
+	{
+		n: "01",
+		title: "Email photos first",
+		body: "Send front/back + close-ups, plus your goal (display, preservation, grading). We’ll tell you what’s realistic and any risks before you ship anything.",
+	},
+	{
+		n: "02",
+		title: "We review and confirm fit",
+		body: "If we can take the job, we’ll reply with a simple plan, a quote (based on your card count), and an estimated turnaround.",
+	},
+	{
+		n: "03",
+		title: "You approve, then you ship",
+		body: "No work starts until you approve in writing. After approval, we send the shipping address and packing notes.",
+	},
+] as const;
+
+const faqs = [
+	{
+		q: "Do I need to contact you before shipping my cards?",
+		a: "Yes—please email photos first. We’ll confirm if we can take the job and then provide the exact shipping address and intake steps.",
+	},
+	{
+		q: "How much does it cost?",
+		a: "It’s $50 per card with a 5-card minimum. Shipping isn’t included; return shipping is billed at cost with tracking.",
+	},
+	{
+		q: "Will this improve my card’s grade?",
+		a: "Maybe, but we don’t guarantee it. We focus on conservative improvement and stability—not chasing grades.",
+	},
+	{
+		q: "How long does it take?",
+		a: "We’ll quote an estimated turnaround in our email after we review your photos. Timing depends on the queue, card count, and damage level.",
+	},
+	{
+		q: "What if I don’t approve the plan?",
+		a: "That’s okay—no work starts without your written approval. If you’ve already shipped cards in, we’ll return them safely; return shipping is billed at cost with tracking.",
+	},
+	{
+		q: "What do you mean by restoration vs alteration?",
+		a: "We restore, we don’t alter. If a job would likely be flagged as alteration by grading standards, we’ll tell you upfront and recommend against it.",
+	},
+] as const;
 ---
 
 <Layout
@@ -22,7 +67,7 @@ const mailtoHref =
 		Skip to content
 	</a>
 
-	<div class="min-h-dvh bg-slate-50 text-slate-950">
+	<div class="min-h-dvh bg-slate-50 pb-24 text-slate-950 md:pb-0">
 		<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur">
 			<div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
 				<a href="/" class="group flex items-center gap-3">
@@ -73,7 +118,6 @@ const mailtoHref =
 
 		<main id="main">
 			<section class="relative">
-
 				<div class="mx-auto w-full max-w-6xl px-5 py-12 sm:py-16">
 					<div class="grid gap-10 lg:grid-cols-12 lg:items-start">
 						<div class="lg:col-span-7">
@@ -85,7 +129,7 @@ const mailtoHref =
 								Bring your trading cards back to life
 							</h1>
 							<p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700 sm:text-xl">
-								Start with photos and a quick note. We’ll review what’s possible, outline the risks, and send a restoration plan before you ship anything. Your cards come back cleaner, sharper, and ready to display.
+								Start with photos and a quick note. We’ll tell you what’s realistic, what the risks are, and what we’d recommend—before you ship anything.
 							</p>
 
 							<div class="mt-8 flex flex-wrap items-center gap-3">
@@ -97,9 +141,9 @@ const mailtoHref =
 								</a>
 								<a
 									class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-slate-900 ring-1 ring-slate-200/80 shadow-sm hover:bg-slate-50"
-									href="#before-after"
+									href="#pricing"
 								>
-									See before/after
+									View pricing
 								</a>
 								<a class="inline-flex items-center justify-center rounded-full px-3 py-3 text-sm font-semibold text-slate-700 hover:text-slate-950" href="#how-it-works">
 									Learn how it works
@@ -115,7 +159,7 @@ const mailtoHref =
 							<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
 								<h2 class="text-lg font-bold text-slate-950">Fastest way to start</h2>
 								<p class="mt-2 text-sm leading-relaxed text-slate-700">
-									Email photos first. We’ll confirm if we can take the job, outline risks, and provide the exact shipping address + intake steps.
+									Email photos first. If we can take the job, we’ll reply with next steps and the shipping address (so nothing gets lost or misrouted).
 								</p>
 
 								<div class="mt-5 grid gap-3">
@@ -131,7 +175,7 @@ const mailtoHref =
 										<ul class="mt-3 space-y-2 text-sm text-slate-700">
 											<li class="flex gap-2">
 												<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-												<span><strong class="font-semibold text-slate-950">Photos:</strong> front + back, plus close-ups of the damage (bends, creases, dents, edge wear, lifting).</span>
+												<span><strong class="font-semibold text-slate-950">Photos:</strong> front + back, plus close-ups of the damage.</span>
 											</li>
 											<li class="flex gap-2">
 												<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
@@ -145,12 +189,12 @@ const mailtoHref =
 									</div>
 								</div>
 
-								<div class="mt-5 flex flex-wrap items-center gap-2">
-									<a class="rounded-full bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200/80 hover:bg-slate-100" href="#contact">
-										Or jump to contact details
-									</a>
-									<a class="rounded-full bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200/80 hover:bg-slate-100" href="#socials">
-										DM {socials[0].handle}
+								<div class="mt-5">
+									<a
+										class="rounded-full bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200/80 hover:bg-slate-100"
+										href={mailtoHref}
+									>
+										Or email us
 									</a>
 								</div>
 							</div>
@@ -159,16 +203,43 @@ const mailtoHref =
 				</div>
 			</section>
 
-			<section class="border-y border-slate-200 bg-white" id="before-after" aria-label="Before and after photos">
-				<div class="mx-auto w-full max-w-6xl px-5 py-12">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="how-it-works" aria-label="How it works">
+				<div class="flex flex-wrap items-end justify-between gap-4">
+					<div class="max-w-3xl">
+						<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">How it works</h2>
+						<p class="mt-3 text-slate-700">Photos first → clear plan → your approval. No surprises.</p>
+					</div>
+					<a class="text-sm font-semibold text-slate-800 hover:text-slate-950" href={mailtoHref}>Start with photos →</a>
+				</div>
+
+				<div class="mt-8 grid gap-5 md:grid-cols-3">
+					{howItWorks.map((s) => (
+						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
+							<p class="text-sm font-semibold text-slate-600">{s.n}</p>
+							<h3 class="mt-2 text-lg font-bold text-slate-950">{s.title}</h3>
+							<p class="mt-3 text-sm leading-relaxed text-slate-700">{s.body}</p>
+						</div>
+					))}
+				</div>
+
+				<div class="mt-6 rounded-3xl border border-emerald-200 bg-emerald-50/60 p-6">
+					<h3 class="text-lg font-bold text-slate-950">Quick note on restoration</h3>
+					<p class="mt-2 text-sm leading-relaxed text-slate-700">
+						We focus on careful restoration—not alteration. If a job would likely be flagged as alteration, we’ll tell you before anything starts.
+					</p>
+				</div>
+			</section>
+
+			<section class="scroll-mt-24 border-y border-slate-200 bg-white" id="before-after" aria-label="Before and after photos">
+				<div class="mx-auto w-full max-w-6xl px-5 py-14">
 					<div class="flex flex-wrap items-end justify-between gap-4">
 						<div>
 							<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Before / After</h2>
 							<p class="mt-2 max-w-2xl text-sm text-slate-700">
-								Placeholder gallery for 3 examples. Swap these with real photos when ready.
+								Placeholder gallery (3 examples). Swap these with real photos when ready.
 							</p>
 						</div>
-						<a class="text-sm font-semibold text-slate-800 hover:text-slate-950" href="#contact">Send yours →</a>
+						<a class="text-sm font-semibold text-slate-800 hover:text-slate-950" href={mailtoHref}>Send yours →</a>
 					</div>
 
 					<div class="mt-8 grid gap-5 md:grid-cols-3">
@@ -185,7 +256,7 @@ const mailtoHref =
 									</div>
 								</div>
 								<figcaption class="p-4 text-sm text-slate-700">
-									<strong class="font-semibold text-slate-950">Placeholder caption:</strong> what changed, what stayed the same, and the risk notes.
+									<strong class="font-semibold text-slate-950">Caption:</strong> what changed, what stayed the same, and any risk notes.
 								</figcaption>
 							</figure>
 						))}
@@ -193,407 +264,16 @@ const mailtoHref =
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl px-5 py-14" id="getting-started" aria-label="Getting started">
-				<div>
-					<div class="max-w-3xl">
-						<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Getting started</h2>
-						<p class="mt-3 text-slate-700">
-							If you have valuable cards, the main question is “what happens before I ship anything?” This is the flow from first message to cards back in hand.
-						</p>
-					</div>
-
-					<div class="mt-8 grid gap-5 lg:grid-cols-3">
-						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<p class="text-sm font-semibold text-slate-600">Step 01</p>
-							<h3 class="mt-2 text-lg font-bold text-slate-950">1) Email photos first</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								Send a few clear photos and a short description of the damage and your goal (display, collection, or grading). We’ll reply with next steps and whether restoration looks realistic.
-							</p>
-							<ul class="mt-4 space-y-2 text-sm text-slate-700">
-								<li class="flex gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span>Front + back, straight-on</span>
-								</li>
-								<li class="flex gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-									<span>Close-ups of bends/creases/edge issues</span>
-								</li>
-								<li class="flex gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-									<span>Any prior damage notes (water, smoke, adhesive, etc.)</span>
-								</li>
-							</ul>
-						</div>
-
-						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<p class="text-sm font-semibold text-slate-600">Step 02</p>
-							<h3 class="mt-2 text-lg font-bold text-slate-950">2) We send shipping instructions</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								After we review your photos, we’ll confirm if we can take the job and share the exact shipping address and packing checklist. This prevents surprise shipments and reduces risk in transit.
-							</p>
-							<p class="mt-4 text-xs leading-relaxed text-slate-600">
-								We strongly recommend tracked shipping. For higher-value cards, consider insurance and signature on delivery.
-							</p>
-						</div>
-
-						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<p class="text-sm font-semibold text-slate-600">Step 03</p>
-							<h3 class="mt-2 text-lg font-bold text-slate-950">3) Inspection → plan → approval</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								Once your cards arrive, we do a close inspection and send a restoration plan with risks and recommendations. <strong class="font-semibold text-slate-950">No work starts until you approve</strong>.
-							</p>
-							<p class="mt-4 text-xs leading-relaxed text-slate-600">
-								If you decide not to proceed, we can return your cards. Details are shared with your plan so you can make a clear call.
-							</p>
-						</div>
-					</div>
-
-					<div class="mt-6 rounded-3xl border border-emerald-200 bg-emerald-50/60 p-6">
-						<h3 class="text-lg font-bold text-slate-950">Typical response time</h3>
-						<p class="mt-2 text-sm leading-relaxed text-slate-700">
-							We reply to new requests within <strong class="font-semibold text-slate-950">1–2 business days</strong>. If you have a deadline (event, gift, show), mention it in your email and we’ll tell you what’s realistic.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="how-it-works" aria-label="How it works">
-				<div class="flex flex-wrap items-end justify-between gap-4">
-					<div>
-						<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">How we work</h2>
-						<p class="mt-3 max-w-2xl text-slate-700">
-							No surprises. We look closely, we explain what we see, and we only work on what you're comfortable with.
-						</p>
-					</div>
-					<a class="text-sm font-semibold text-slate-800 hover:text-slate-950" href={mailtoHref}>Start with photos →</a>
-				</div>
-
-				<div class="mt-8 grid gap-5 md:grid-cols-3">
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">We inspect everything</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							Under magnification and UV light. Surface, edges, corners, and how the card stock behaves. Understanding the full picture helps us work safely.
-						</p>
-					</div>
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">We tell you what we found</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							Here's what we found, what we can realistically improve, what the risks are, and what we won't touch. You decide if we proceed.
-						</p>
-					</div>
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">We document it all</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							Before photos, after photos, and careful notes. Your cards are packaged securely for return shipping.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="what-we-do" aria-label="What we can help with">
-				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">What we can help with</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">
-					We work on Pokémon, Yu-Gi-Oh!, Magic: The Gathering, sports cards, and other trading cards. Here's what we typically work on.
-				</p>
-
-				<div class="mt-8 grid gap-5 lg:grid-cols-2">
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">Common improvements</h3>
-						<ul class="mt-4 space-y-2 text-sm text-slate-700">
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Surface cleaning for dirt, fingerprints, and handling marks</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Light warping or bends</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Minor adhesive residue</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Edge roughness or lifting</span>
-							</li>
-						</ul>
-						<p class="mt-4 text-xs text-slate-600">
-							Every card is different. We'll assess yours and be honest about what's possible.
-						</p>
-					</div>
-
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">What we won't do</h3>
-						<ul class="mt-4 space-y-2 text-sm text-slate-700">
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-								<span>Trim, sand, or reshape corners or edges</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-								<span>Add color, touch up ink, or simulate printing</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-								<span>Anything meant to fool grading companies</span>
-							</li>
-						</ul>
-						<p class="mt-4 text-xs font-medium text-slate-800">
-							We're here to restore, not alter. If something looks like it would be flagged as alteration, we'll tell you upfront.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="process" aria-label="The process">
-				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">The process</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">
-					From the moment your cards arrive until they're on their way back. We expect 7–14 days, but turnaround could be longer based on our queue, how many cards are in the order, and the damage on each card.
-				</p>
-
-				<div class="mt-8 grid gap-5 lg:grid-cols-12">
-					<div class="lg:col-span-5">
-						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<h3 class="text-lg font-bold text-slate-950">How updates + approval work</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								Everything is documented in writing so you can make a clear decision. We communicate by email unless we agree on something else.
-							</p>
-							<ul class="mt-4 space-y-2 text-sm text-slate-700">
-								<li class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span><strong class="font-semibold text-slate-950">You receive:</strong> photos + findings + a recommended plan, with risks and what we will/won’t do.</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-									<span><strong class="font-semibold text-slate-950">You approve:</strong> by replying in writing (or via a simple confirmation method we provide).</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-									<span><strong class="font-semibold text-slate-950">No surprises:</strong> if we discover something new during work, we pause and check in before continuing.</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="lg:col-span-7">
-						<div class="grid gap-4">
-							{[
-								{
-									n: "1",
-									title: "Your cards arrive",
-									body: "We log everything, take consistent photos under good lighting, and make initial notes about condition.",
-								},
-								{
-									n: "2",
-									title: "Close inspection",
-									body: "Magnification and UV light check. We look at surface, edges, corners, and how the card stock behaves. This helps us determine what's safe to work on.",
-								},
-								{
-									n: "3",
-									title: "We send you a plan",
-									body: "Here's what we found, what we think we can do, what the risks are, and what we recommend. You review and approve before we start any work.",
-									after:
-										"If you want changes (for example, “only clean, no stabilization”), tell us. We’ll adjust the plan or recommend against parts that aren’t safe.",
-								},
-								{
-									n: "4",
-									title: "We do the work",
-									body: "Once you approve, we proceed carefully. Controlled cleaning, stabilization when needed, and conservative methods throughout.",
-								},
-								{
-									n: "5",
-									title: "Final photos and return",
-									body: "We photograph the results, package everything securely, and arrange return shipping with tracking.",
-									after:
-										"You’ll receive tracking when your package ships. If you’d like insurance or signature on delivery, tell us and we’ll include options.",
-								},
-							].map((step) => (
-								<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-									<div class="flex items-start gap-4">
-										<div class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-slate-50 text-sm font-black text-slate-900 ring-1 ring-slate-200/80">
-											{step.n}
-										</div>
-										<div class="min-w-0">
-											<h3 class="text-lg font-bold text-slate-950">{step.title}</h3>
-											<p class="mt-2 text-sm leading-relaxed text-slate-700">{step.body}</p>
-											{step.after && <p class="mt-3 text-xs leading-relaxed text-slate-600">{step.after}</p>}
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
-
-						<div class="mt-4 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<h3 class="text-lg font-bold text-slate-950">If you decide not to proceed</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								If the risks don’t feel worth it, that’s okay. We’ll return your cards safely. Return shipping is billed at cost with tracking, and any inspection/handling fees (if applicable) are communicated up front so you’re never surprised.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="after-care-report" aria-label="Your after-care report">
-				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Your after-care report</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">
-					Every order comes with a detailed report. Photos, findings, and a clear picture of what changed.
-				</p>
-
-				<div class="mt-8 grid gap-5 lg:grid-cols-2">
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">Comprehensive documentation</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							Your report includes before and after photos under consistent lighting, showing exactly what we found and what changed. We document everything we observed during inspection and restoration.
-						</p>
-						<ul class="mt-4 space-y-2 text-sm text-slate-700">
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>High-resolution before and after photos</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Detailed notes on condition and findings</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-								<span>Documentation of work performed</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">Magnification and UV analysis</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							We use magnification and UV/blacklight to reveal imperfections that aren't visible to the naked eye. These images are included in your report, highlighting issues like surface scratches, hidden residue, or card stock anomalies.
-						</p>
-						<ul class="mt-4 space-y-2 text-sm text-slate-700">
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-								<span>Magnified views showing surface details</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-								<span>UV/blacklight images highlighting imperfections</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-								<span>Edge and corner condition documentation</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="mt-5 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-					<h3 class="text-lg font-bold text-slate-950">Surface condition assessment</h3>
-					<p class="mt-3 text-sm leading-relaxed text-slate-700">
-						For each card, we document the surface condition before and after restoration. This gives you a clear comparison of what changed and what remains.
-					</p>
-					<div class="mt-4 grid gap-4 sm:grid-cols-2">
-						<div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-							<p class="text-sm font-semibold text-slate-800">Before restoration</p>
-							<p class="mt-1 text-sm text-slate-600">Documented surface condition, imperfections, and any visible damage</p>
-						</div>
-						<div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-							<p class="text-sm font-semibold text-slate-800">After restoration</p>
-							<p class="mt-1 text-sm text-slate-600">Current surface state, improvements made, and any remaining characteristics</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="mt-5 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-					<h3 class="text-lg font-bold text-slate-950">Category-by-category grading</h3>
-					<p class="mt-3 text-sm leading-relaxed text-slate-700">
-						Your report includes before and after assessments across key grading categories, giving you a clear view of how each aspect of the card changed.
-					</p>
-					<div class="mt-4 space-y-3">
-						{[
-							{ label: "Surface", before: "6", after: "8" },
-							{ label: "Edges", before: "5", after: "7" },
-							{ label: "Corners", before: "7", after: "9" },
-							{ label: "Centering", before: "8", after: "9" },
-						].map((row) => (
-							<div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-								<div class="flex flex-wrap items-center justify-between gap-2">
-									<span class="font-semibold text-slate-950">{row.label}</span>
-									<div class="flex items-center gap-2 text-sm">
-										<span class="text-slate-600">Before:</span>
-										<span class="font-bold text-slate-900">{row.before}</span>
-										<span class="text-slate-400">→</span>
-										<span class="text-slate-600">After:</span>
-										<span class="font-bold text-slate-900">{row.after}</span>
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
-					<p class="mt-4 text-xs leading-relaxed text-slate-600">
-						These assessments are based on standard grading criteria and provide a structured view of your card's condition. They're meant to help you understand what changed, not as a guarantee of any specific grade.
-					</p>
-				</div>
-
-				<div class="mt-5 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-					<h3 class="text-lg font-bold text-slate-950">Estimated PSA grade</h3>
-					<p class="mt-3 text-sm leading-relaxed text-slate-700">
-						Based on our inspection and restoration work, we provide an estimated PSA grade range for your card. This estimate is our best professional assessment, but <strong class="font-semibold text-slate-950">we make no guarantee</strong> that PSA or any grading company will assign this grade.
-					</p>
-					<div class="mt-4 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-						<p class="text-sm font-medium text-slate-800">
-							<strong class="font-bold text-slate-950">Important:</strong> Grading companies have their own standards and processes. Our estimate is based on common grading criteria, but final grades depend on many factors including the specific grader, current standards, and subjective interpretation. We provide this estimate to help you understand potential outcomes, not as a promise.
-						</p>
-					</div>
-					<p class="mt-4 text-xs leading-relaxed text-slate-600">
-						Remember: some restoration work may be viewed as alteration by grading companies. If this was a concern for your card, we would have discussed it with you before any work began.
-					</p>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="testimonials" aria-label="Testimonials">
-				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">What collectors say</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">
-					Honest communication, careful handling, and clear documentation. You always know what was done and why.
-				</p>
-
-				<div class="mt-8 grid gap-5 md:grid-cols-3">
-					<figure class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<blockquote class="text-sm leading-relaxed text-slate-700">
-							“Clear communication the whole way. I got a plan with photos before anything started, and the final report made it easy to see what changed.”
-						</blockquote>
-						<figcaption class="mt-4 text-xs text-slate-600">
-							<div class="font-semibold text-slate-950">Jordan M.</div>
-							<div>Pokémon collector • Ontario</div>
-						</figcaption>
-					</figure>
-					<figure class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<blockquote class="text-sm leading-relaxed text-slate-700">
-							“I appreciated the honesty about risks and grading. They told me what wasn’t worth attempting and focused on safe improvements.”
-						</blockquote>
-						<figcaption class="mt-4 text-xs text-slate-600">
-							<div class="font-semibold text-slate-950">Casey R.</div>
-							<div>Sports card collector • Michigan</div>
-						</figcaption>
-					</figure>
-					<figure class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<blockquote class="text-sm leading-relaxed text-slate-700">
-							“Packaging and documentation were excellent. Tracking was shared right away, and the cards came back secured like I’d expect from a collector.”
-						</blockquote>
-						<figcaption class="mt-4 text-xs text-slate-600">
-							<div class="font-semibold text-slate-950">Alex T.</div>
-							<div>MTG collector • Alberta</div>
-						</figcaption>
-					</figure>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="pricing" aria-label="Pricing">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="pricing" aria-label="Pricing">
 				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Pricing</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">Simple and straightforward. $50 per card, with a 5-card minimum.</p>
+				<p class="mt-3 max-w-3xl text-slate-700">Simple: $50 per card, with a 5-card minimum.</p>
 
 				<div class="mt-6 grid gap-5 lg:grid-cols-12">
 					<div class="lg:col-span-7">
 						<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<h3 class="text-lg font-bold text-slate-950">Payment + approvals</h3>
+							<h3 class="text-lg font-bold text-slate-950">Approvals + payment</h3>
 							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								You receive a written restoration plan first, and <strong class="font-semibold text-slate-950">you approve it before we start any work</strong>.
+								You receive a written plan first, and <strong class="font-semibold text-slate-950">you approve it before we start any work</strong>.
 							</p>
 							<ul class="mt-4 space-y-2 text-sm text-slate-700">
 								<li class="flex items-start gap-2">
@@ -602,58 +282,18 @@ const mailtoHref =
 								</li>
 								<li class="flex items-start gap-2">
 									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-									<span><strong class="font-semibold text-slate-950">How you pay:</strong> we’ll include payment options in your plan/invoice so you can choose the easiest method.</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span>
-									<span><strong class="font-semibold text-slate-950">If you decline:</strong> we’ll return your cards. You cover return shipping; any inspection/handling fees (if applicable) are disclosed before you ship to us so there are no surprises.</span>
+									<span><strong class="font-semibold text-slate-950">How you pay:</strong> we’ll include payment options in your invoice so you can choose what’s easiest.</span>
 								</li>
 							</ul>
 						</div>
 
 						<div class="mt-5 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<h3 class="text-lg font-bold text-slate-950">Shipping, tracking, and insurance</h3>
+							<h3 class="text-lg font-bold text-slate-950">Shipping (short version)</h3>
 							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								Shipping is the riskiest part of the entire process. We take a conservative approach, and we recommend you do too.
+								We recommend tracked shipping both ways. For higher-value cards, consider insurance and signature on delivery.
 							</p>
-							<div class="mt-4 grid gap-4 md:grid-cols-2">
-								<div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-									<p class="font-semibold text-slate-950">Shipping to us</p>
-									<ul class="mt-3 space-y-2 text-sm text-slate-700">
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-											<span>We recommend <strong class="font-semibold text-slate-950">tracked</strong> shipping and strong packaging.</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-											<span>For high-value cards, consider <strong class="font-semibold text-slate-950">insurance</strong> and signature on delivery.</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-											<span>We’ll confirm the shipping address and intake details by email before you send anything.</span>
-										</li>
-									</ul>
-								</div>
-								<div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/80">
-									<p class="font-semibold text-slate-950">Return shipping</p>
-									<ul class="mt-3 space-y-2 text-sm text-slate-700">
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-											<span>Return shipping is billed <strong class="font-semibold text-slate-950">at cost</strong> with tracking.</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-											<span>We can add insurance/signature if you want. Tell us your preference.</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
-											<span>We send tracking as soon as your package ships.</span>
-										</li>
-									</ul>
-								</div>
-							</div>
 							<p class="mt-4 text-xs text-slate-600">
-								Carrier availability varies by destination. If you have a preferred carrier/service level, include it in your initial email.
+								We’ll provide the exact shipping address after we review your photos and you approve the plan.
 							</p>
 						</div>
 					</div>
@@ -683,14 +323,6 @@ const mailtoHref =
 						</div>
 
 						<div class="mt-5 rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-							<h3 class="text-lg font-bold text-slate-950">A note about grading</h3>
-							<p class="mt-3 text-sm leading-relaxed text-slate-700">
-								Some cards are damaged in ways that would make meaningful improvement count as <strong class="font-semibold text-slate-950">alteration</strong> under PSA, BGS, or CGC standards. If that applies to your card, we'll tell you before we do anything.
-							</p>
-							<p class="mt-3 text-xs leading-relaxed text-slate-600">
-								This service works best for collectors who want to preserve and display cards that got damaged. We don't promise grade improvements.
-							</p>
-							<div class="my-6 h-px bg-slate-200"></div>
 							<h3 class="text-lg font-bold text-slate-950">How to pack your cards</h3>
 							<ul class="mt-4 space-y-2 text-sm text-slate-700">
 								<li class="flex items-start gap-2">
@@ -715,48 +347,12 @@ const mailtoHref =
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="faq" aria-label="Common questions">
+			<section class="mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-14" id="faq" aria-label="Common questions">
 				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Common questions</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">Straight answers to the things collectors usually ask.</p>
+				<p class="mt-3 max-w-3xl text-slate-700">Straight answers to the things collectors ask before sending photos.</p>
 
 				<div class="mt-8 space-y-4">
-					{[
-						{
-							q: "Do I need to contact you before shipping my cards?",
-							a: "Yes. Please email photos first. We’ll confirm if we can take the job, answer questions, and provide the exact shipping address and intake instructions so nothing gets lost or misrouted.",
-						},
-						{
-							q: "Will this improve my card's grade?",
-							a: "Maybe, but we don't guarantee it. Some restoration work can be seen as alteration by grading companies, and some damage like creases or ink loss might still be visible. We focus on making your card look better and stay stable, not on trying to improve grades.",
-						},
-						{
-							q: "When do I pay, and what payment methods do you take?",
-							a: "You approve the restoration plan first. Payment is due after approval and before work begins. We include payment options with your invoice so you can choose the method that’s easiest for you.",
-						},
-						{
-							q: "What if I don’t approve the plan?",
-							a: "That’s fine. We’ll return your cards safely. Return shipping is billed at cost with tracking. Any inspection/handling fees (if applicable) are disclosed before you ship to us so you can decide with full information.",
-						},
-						{
-							q: "Why do you need at least 5 cards?",
-							a: "Proper inspection and documentation take time. A 5-card minimum keeps the process efficient and the per-card price fair. If you have fewer cards, contact us and we can discuss pricing.",
-							strong: "5-card minimum",
-						},
-						{
-							q: "What if my card is too damaged?",
-							a: "We'll tell you. If a card has severe stock separation, mold risk, heavy water damage, or if fixing it would require work that counts as alteration, we'll recommend against restoration. We'd rather be honest than risk making things worse.",
-						},
-						{
-							q: "How long does it take?",
-							a: "We expect 7–14 days, but turnaround could be longer based on our queue, how many cards you send, and the damage on each card. More complex work or larger orders may require additional time.",
-							strong: "7–14 days",
-						},
-						{
-							q: "What about shipping and insurance?",
-							a: "We recommend tracked shipping both ways. You typically pay for sending cards to us; we bill return shipping at cost with tracking. Insurance is available for return shipping if you want it. Restoration always has some risk. That's why we document everything and get your approval first.",
-							a2: "If you’re shipping higher-value cards, consider insurance and signature on delivery. If you have a preferred carrier or service level, mention it in your email and we’ll do our best to accommodate.",
-						},
-					].map((item) => (
+					{faqs.map((item) => (
 						<details class="group rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm open:bg-slate-50">
 							<summary class="cursor-pointer list-none text-lg font-bold text-slate-950">
 								<span class="mr-2 inline-block translate-y-[1px] text-slate-400 group-open:rotate-90">›</span>
@@ -764,159 +360,13 @@ const mailtoHref =
 							</summary>
 							<p class="mt-3 text-sm leading-relaxed text-slate-700">
 								{item.a}
-								{item.strong && (
-									<>
-										{" "}
-										<strong class="font-semibold text-slate-950">{item.strong}</strong>
-									</>
-								)}
 							</p>
-							{item.a2 && <p class="mt-3 text-sm leading-relaxed text-slate-700">{item.a2}</p>}
 						</details>
 					))}
 				</div>
 			</section>
 
-			<section class="mx-auto w-full max-w-6xl px-5 pb-14" id="after-return" aria-label="After your cards come back">
-				<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">After your cards come back</h2>
-				<p class="mt-3 max-w-3xl text-slate-700">
-					If something looks different than expected, we want to hear about it quickly so we can review the documentation together.
-				</p>
-
-				<div class="mt-8 grid gap-5 lg:grid-cols-2">
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">Questions or concerns</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							Reach out within <strong class="font-semibold text-slate-950">48 hours</strong> of delivery with photos and a description of what you’re seeing. We’ll compare against the before/after photos and notes from your report and walk through next steps.
-						</p>
-						<p class="mt-4 text-xs leading-relaxed text-slate-600">
-							Because restoration involves risk and card stock varies, outcomes can differ card to card. Our goal is always careful, conservative improvement with clear documentation.
-						</p>
-					</div>
-
-					<div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200/80 shadow-sm">
-						<h3 class="text-lg font-bold text-slate-950">Care after restoration</h3>
-						<p class="mt-3 text-sm leading-relaxed text-slate-700">
-							We recommend moving your cards into clean sleeves/holders and avoiding heat, humidity, and pressure. If your report includes specific after-care notes, follow those first.
-						</p>
-						<p class="mt-4 text-xs leading-relaxed text-slate-600">
-							If you plan to submit for grading, remember that some restoration can be interpreted as alteration by grading companies. We’ll flag that risk before work begins.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="border-t border-slate-200 bg-white" id="socials" aria-label="Social links">
-				<div class="mx-auto w-full max-w-6xl px-5 py-12">
-					<div class="grid gap-8 lg:grid-cols-12 lg:items-center">
-						<div class="lg:col-span-6">
-							<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Follow along</h2>
-							<p class="mt-3 max-w-2xl text-slate-700">
-								Links to socials for <strong class="font-semibold text-slate-950">@readysetgem</strong>. (Update platforms/links anytime.)
-							</p>
-						</div>
-						<div class="lg:col-span-6">
-							<div class="grid gap-3 sm:grid-cols-3">
-								{socials.map((s) => (
-									<a
-										class="rounded-3xl bg-white p-4 text-left ring-1 ring-slate-200/80 shadow-sm hover:bg-slate-50"
-										href={s.href}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<div class="text-xs font-semibold uppercase tracking-wider text-slate-600">{s.label}</div>
-										<div class="mt-2 text-sm font-bold text-slate-950">{s.handle}</div>
-										<div class="mt-2 text-xs text-slate-600">Open</div>
-									</a>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="mx-auto w-full max-w-6xl px-5 py-14" id="contact" aria-label="Contact">
-				<div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-						<div class="grid gap-8 lg:grid-cols-2 lg:items-start">
-							<div class="min-w-0">
-								<h2 class="text-3xl font-extrabold tracking-tight text-slate-950">Ready to get your cards fixed?</h2>
-								<p class="mt-3 text-slate-700">
-									Start with photos and a quick note about what you'd like done. We'll reply with what we can help with, what the risks are, and how to proceed.
-								</p>
-
-								<div class="mt-6 flex flex-wrap items-center gap-3">
-									<a
-										class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-bold text-slate-950 hover:bg-slate-50"
-										href={mailtoHref}
-									>
-										Get my cards fixed
-									</a>
-									<a class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-slate-900 ring-1 ring-slate-200/80 shadow-sm hover:bg-slate-50" href="#pricing">
-										See pricing details
-									</a>
-								</div>
-
-								<p class="mt-4 text-sm text-slate-600">
-									We reply within <strong class="font-semibold text-slate-950">1–2 business days</strong>. If you have a deadline, mention it and we’ll be honest about timing.
-								</p>
-							</div>
-
-							<div class="rounded-3xl bg-slate-50 p-6 ring-1 ring-slate-200/80">
-								<h3 class="text-lg font-bold text-slate-950">At a glance</h3>
-								<div class="mt-4 grid gap-3 sm:grid-cols-2">
-									<div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/80">
-										<p class="text-sm font-semibold text-slate-800">Location</p>
-										<p class="mt-1 text-sm text-slate-600">Kingston, Ontario, Canada</p>
-									</div>
-									<div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/80">
-										<p class="text-sm font-semibold text-slate-800">Service area</p>
-										<p class="mt-1 text-sm text-slate-600">North America</p>
-									</div>
-									<div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/80">
-										<p class="text-sm font-semibold text-slate-800">Pricing</p>
-										<p class="mt-1 text-sm text-slate-600">$50 per card, minimum 5</p>
-									</div>
-									<div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/80">
-										<p class="text-sm font-semibold text-slate-800">Turnaround</p>
-										<p class="mt-1 text-sm text-slate-600">
-											7–14 days expected, may be longer based on queue, number of cards, and damage level
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="mt-8 rounded-3xl bg-slate-50 p-6 ring-1 ring-slate-200/80">
-							<h3 class="text-lg font-bold text-slate-950">What to include in your first email</h3>
-							<div class="mt-4 grid gap-3 md:grid-cols-2">
-								<div class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span class="text-sm text-slate-700">
-										<strong class="font-semibold text-slate-950">Photos:</strong> front + back, plus close-ups of the damage (bends, creases, dents, edge wear, lifting).
-									</span>
-								</div>
-								<div class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span class="text-sm text-slate-700">
-										<strong class="font-semibold text-slate-950">Card list:</strong> game/set (if known) and how many cards you’d like restored.
-									</span>
-								</div>
-								<div class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span class="text-sm text-slate-700">
-										<strong class="font-semibold text-slate-950">Goal:</strong> display, collection preservation, or grading-focused.
-									</span>
-								</div>
-								<div class="flex items-start gap-2">
-									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
-									<span class="text-sm text-slate-700">
-										<strong class="font-semibold text-slate-950">Any risks:</strong> water exposure, mold smell, smoke, adhesive, or prior attempts to fix.
-									</span>
-								</div>
-							</div>
-						</div>
-				</div>
-			</section>
+			<!-- Contact CTA section removed -->
 		</main>
 
 		<footer class="border-t border-slate-200 bg-white py-10">
@@ -948,19 +398,31 @@ const mailtoHref =
 					</p>
 					<p class="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} Ready Set Gem. All rights reserved.</p>
 				</div>
-				<div class="flex flex-wrap items-center gap-2">
-					<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#how-it-works">How it works</a>
-					<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#pricing">Pricing</a>
-					<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#faq">FAQ</a>
-					<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#contact">Contact</a>
-					<a class="rounded-full px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#socials">Socials</a>
+				<div class="flex flex-col gap-4 md:items-end">
+					<div class="flex flex-wrap items-center gap-2">
+						<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#how-it-works">How it works</a>
+						<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#pricing">Pricing</a>
+						<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href="#faq">FAQ</a>
+					</div>
+					<div class="flex flex-wrap items-center gap-2">
+						{socials.map((s) => (
+							<a
+								class="rounded-full bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200/80 hover:bg-slate-100"
+								href={s.href}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{s.label}
+							</a>
+						))}
+					</div>
 				</div>
 			</div>
 		</footer>
 
 		<a
 			href={mailtoHref}
-			class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-700"
+			class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-700 md:hidden"
 		>
 			Email photos
 		</a>
