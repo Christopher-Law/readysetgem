@@ -7,6 +7,29 @@ const socials = [
 	{ label: "YouTube", href: "https://youtube.com/@slabworksca", handle: "@slabworksca" },
 ] as const;
 
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	name: "Slabworks",
+	description:
+		"Trading card restoration service. We carefully restore your cards with detailed inspection and honest communication. Based in Kingston, Ontario.",
+	email: "chris@slabworks.ca",
+	areaServed: "North America",
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Kingston",
+		addressRegion: "ON",
+		addressCountry: "CA",
+	},
+	makesOffer: {
+		"@type": "Offer",
+		price: "50",
+		priceCurrency: "CAD",
+		description: "$50 per card. 10% off on orders of 10+ cards.",
+	},
+	sameAs: socials.map((s) => s.href),
+} as const;
+
 const mailtoHref =
 	"mailto:chris@slabworks.ca?subject=Card%20Restoration%20Request&body=Hi%20Slabworks%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!";
 
@@ -82,6 +105,8 @@ const faqs = [
 	title="Slabworks - Card Restoration"
 	description="Trading card restoration service. We carefully restore your cards with detailed inspection and honest communication. Based in Kingston, Ontario."
 >
+	<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+
 	<a
 		href="#main"
 		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg ring-1 ring-white/30"

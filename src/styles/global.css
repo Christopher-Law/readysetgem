@@ -2,15 +2,16 @@
 
 @layer base {
   :root {
-    --paper-cream: #faf8f3;
-    --paper-warm: #f5f1e8;
-    --paper-shadow: #e8e0d0;
-    --ink-dark: #2c2416;
-    --ink-medium: #4a3f2e;
-    --ink-light: #6b5d47;
-    --accent-amber: #d97706;
-    --accent-rust: #b45309;
-    --border-warm: #d4c4a8;
+    /* Brand-aligned neutrals + accent (emerald/slate) */
+    --paper-cream: #f8fafc; /* slate-50 */
+    --paper-warm: #f1f5f9; /* slate-100 */
+    --paper-shadow: #e2e8f0; /* slate-200 */
+    --ink-dark: #0f172a; /* slate-900 */
+    --ink-medium: #334155; /* slate-700 */
+    --ink-light: #64748b; /* slate-500 */
+    --accent-amber: #059669; /* emerald-600 (kept var name for compatibility) */
+    --accent-rust: #047857; /* emerald-700 (kept var name for compatibility) */
+    --border-warm: #e2e8f0; /* slate-200 */
   }
 
   html {
@@ -23,18 +24,18 @@
         0deg,
         transparent,
         transparent 2px,
-        rgba(212, 196, 168, 0.03) 2px,
-        rgba(212, 196, 168, 0.03) 4px
+        rgba(226, 232, 240, 0.03) 2px,
+        rgba(226, 232, 240, 0.03) 4px
       ),
-      radial-gradient(circle at 20% 30%, rgba(217, 119, 6, 0.04), transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.03), transparent 50%),
+      radial-gradient(circle at 20% 30%, rgba(5, 150, 105, 0.04), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(4, 120, 87, 0.03), transparent 50%),
       var(--paper-cream);
     color: var(--ink-dark);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   ::selection {
-    background: rgba(217, 119, 6, 0.15);
+    background: rgba(5, 150, 105, 0.15);
   }
 
   :focus-visible {
@@ -46,26 +47,26 @@
 @layer utilities {
   .paper-card {
     background:
-      radial-gradient(circle at 25% 15%, rgba(217, 119, 6, 0.06), transparent 55%),
-      radial-gradient(circle at 80% 80%, rgba(180, 83, 9, 0.04), transparent 60%),
+      radial-gradient(circle at 25% 15%, rgba(5, 150, 105, 0.06), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(4, 120, 87, 0.04), transparent 60%),
       var(--paper-warm);
-    border: 1px solid rgba(212, 196, 168, 0.4);
+    border: 1px solid rgba(226, 232, 240, 0.6);
     border-radius: 18px;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.35),
-      0 1px 0 rgba(44, 36, 22, 0.03);
+      0 1px 0 rgba(15, 23, 42, 0.03);
   }
 
   .paper-card-elevated {
     background:
-      radial-gradient(circle at 25% 15%, rgba(217, 119, 6, 0.08), transparent 55%),
-      radial-gradient(circle at 80% 80%, rgba(180, 83, 9, 0.05), transparent 60%),
+      radial-gradient(circle at 25% 15%, rgba(5, 150, 105, 0.08), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(4, 120, 87, 0.05), transparent 60%),
       var(--paper-warm);
-    border: 1px solid rgba(212, 196, 168, 0.5);
+    border: 1px solid rgba(226, 232, 240, 0.7);
     border-radius: 22px;
     box-shadow:
-      0 2px 0 rgba(44, 36, 22, 0.04),
-      0 18px 44px rgba(44, 36, 22, 0.09);
+      0 2px 0 rgba(15, 23, 42, 0.04),
+      0 18px 44px rgba(15, 23, 42, 0.09);
   }
 
   .paper-texture {
@@ -74,15 +75,15 @@
         45deg,
         transparent,
         transparent 35px,
-        rgba(212, 196, 168, 0.02) 35px,
-        rgba(212, 196, 168, 0.02) 70px
+        rgba(226, 232, 240, 0.02) 35px,
+        rgba(226, 232, 240, 0.02) 70px
       );
   }
 
   .paper-panel {
-    background: rgba(254, 243, 199, 0.35);
+    background: rgba(236, 253, 245, 0.55); /* emerald-50 */
     border-radius: 14px;
-    box-shadow: inset 0 0 0 1px rgba(212, 196, 168, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.6);
   }
 
   .hobby-accent {
