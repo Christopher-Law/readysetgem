@@ -22,7 +22,7 @@ export const faqs: readonly FaqItem[] = [
 	},
 	{
 		q: "What if I don’t approve the plan?",
-		a: "That's okay. If you've already shipped cards in, we'll return them safely; return shipping is billed at cost with tracking.",
+		a: "Nothing at all — no hard feelings. If you don’t want to move forward after seeing the plan, we’ll simply shake hands and walk away.",
 	},
 ] as const;
 
