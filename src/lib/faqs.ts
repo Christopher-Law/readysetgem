@@ -21,8 +21,12 @@ export const faqs: readonly FaqItem[] = [
 		a: "We typically reply to new requests within 1–2 business days.",
 	},
 	{
-		q: "What if I don’t approve the plan?",
-		a: "Nothing at all — no hard feelings. If you don’t want to move forward after seeing the plan, we’ll simply shake hands and walk away.",
+		q: "What if I don't approve the plan?",
+		a: "Nothing at all — no hard feelings. If you don't want to move forward after seeing the plan, we'll simply shake hands and walk away.",
+	},
+	{
+		q: "Do you offer a guarantee?",
+		a: "We stand behind our work. If you're not satisfied with the restoration, we'll work with you to make it right. We're committed to honest communication and quality results.",
 	},
 ] as const;
 
