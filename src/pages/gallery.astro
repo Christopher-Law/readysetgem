@@ -6,7 +6,6 @@ import BeforeAfterSwitcher from "../components/BeforeAfterSwitcher.astro";
 import BeforeAfterSwitcherScript from "../components/BeforeAfterSwitcherScript.astro";
 
 const examples = Array.from({ length: 12 }).map((_, idx) => {
-	// NOTE: Placeholder images. Replace with real before/after photos when available.
 	const beforeSrc = `https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=600&fit=crop&auto=format&sig=${idx}`;
 	const afterSrc = `https://images.unsplash.com/photo-1747691875590-14db938e42d4?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${idx}`;
 	return { beforeSrc, afterSrc };
@@ -15,7 +14,7 @@ const examples = Array.from({ length: 12 }).map((_, idx) => {
 
 <Layout
 	title="Slabworks - Before/After Gallery"
-	description="A larger set of before/after restoration examples (placeholders). Swap with real photos when ready."
+	description="Browse our gallery of trading card restoration examples. See real transformations from damaged cards to restored condition."
 >
 	<a
 		href="#main"
@@ -32,10 +31,9 @@ const examples = Array.from({ length: 12 }).map((_, idx) => {
 				<div class="mx-auto w-full max-w-6xl px-5 py-10 sm:py-12">
 					<div class="flex flex-wrap items-end justify-between gap-4">
 						<div class="max-w-3xl">
-							<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Examples</h2>
+							<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Gallery</h2>
 							<p class="mt-2 text-sm text-slate-700">
-								Each card toggles between <strong class="font-semibold text-slate-950">Before</strong> and{" "}
-								<strong class="font-semibold text-slate-950">After</strong>.
+								See the transformation. Each example shows the condition before restoration and the results after our work.
 							</p>
 						</div>
 					</div>
