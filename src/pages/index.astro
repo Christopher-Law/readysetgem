@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import BeforeAfterSwitcher from "../components/BeforeAfterSwitcher.astro";
 import BeforeAfterSwitcherScript from "../components/BeforeAfterSwitcherScript.astro";
 import { socials, mailtoHref } from "../lib/constants";
+import { beforeAfterImages } from "../lib/images";
 
 const structuredData = {
 	"@context": "https://schema.org",
@@ -153,12 +154,14 @@ const faqs = [
 
 						<!-- Before/After Image Switcher -->
 						<div>
-							<BeforeAfterSwitcher
-								beforeSrc="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=600&fit=crop"
-								afterSrc="https://images.unsplash.com/photo-1747691875590-14db938e42d4?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-								beforeAlt="Before restoration"
-								afterAlt="After restoration"
-							/>
+							{beforeAfterImages[0] && (
+								<BeforeAfterSwitcher
+									beforeSrc={beforeAfterImages[0].beforeSrc}
+									afterSrc={beforeAfterImages[0].afterSrc}
+									beforeAlt={beforeAfterImages[0].beforeAlt}
+									afterAlt={beforeAfterImages[0].afterAlt}
+								/>
+							)}
 							<div class="mt-4 text-right">
 								<a
 									class="text-sm font-semibold text-emerald-600 hover:text-emerald-700"
@@ -210,12 +213,12 @@ const faqs = [
 					</div>
 
 					<div class="mt-8 grid gap-5 md:grid-cols-3">
-						{Array.from({ length: 3 }).map((_, idx) => (
+						{beforeAfterImages.slice(0, 3).map((img) => (
 							<BeforeAfterSwitcher
-								beforeSrc="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=600&fit=crop"
-								afterSrc="https://images.unsplash.com/photo-1747691875590-14db938e42d4?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-								beforeAlt="Before restoration"
-								afterAlt="After restoration"
+								beforeSrc={img.beforeSrc}
+								afterSrc={img.afterSrc}
+								beforeAlt={img.beforeAlt}
+								afterAlt={img.afterAlt}
 							/>
 						))}
 					</div>
