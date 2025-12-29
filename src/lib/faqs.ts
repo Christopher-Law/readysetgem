@@ -10,7 +10,7 @@ export const faqs: readonly FaqItem[] = [
 	},
 	{
 		q: "What if my card is too damaged?",
-		a: "We’ll tell you upfront. If a card has severe stock separation, mold risk, heavy water damage, or if work would likely be considered alteration, we’ll recommend against restoration.",
+		a: "We'll tell you upfront. If a card has severe stock separation, mold risk, or heavy water damage, we'll recommend against restoration.",
 	},
 	{
 		q: "Will this improve my card’s grade?",
