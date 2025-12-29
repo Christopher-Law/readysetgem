@@ -7,7 +7,7 @@ type Props = {
 	 * On other pages, use absolute anchors (e.g. "/#pricing") so they work cross-page.
 	 */
 	sectionHrefPrefix?: "" | "/";
-	active?: "home" | "gallery";
+	active?: "home";
 };
 
 const { sectionHrefPrefix = "", active } = Astro.props;
@@ -35,16 +35,6 @@ const sectionHref = (id: string) => `${sectionHrefPrefix}#${id}`;
 					Home
 				</a>
 			) : null}
-
-			<a
-				class={active === "gallery"
-					? "rounded-full bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-950"
-					: "rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950"}
-				href="/gallery"
-				aria-current={active === "gallery" ? "page" : undefined}
-			>
-				Gallery
-			</a>
 
 			<a class="rounded-full px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950" href={sectionHref("how-it-works")}>
 				How it works
