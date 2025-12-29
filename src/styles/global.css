@@ -9,8 +9,7 @@
     --ink-dark: #0f172a; /* slate-900 */
     --ink-medium: #334155; /* slate-700 */
     --ink-light: #64748b; /* slate-500 */
-    --accent-amber: #059669; /* emerald-600 (kept var name for compatibility) */
-    --accent-rust: #047857; /* emerald-700 (kept var name for compatibility) */
+    --accent-amber: #059669; /* emerald-600 */
     --border-warm: #e2e8f0; /* slate-200 */
   }
 
@@ -28,7 +27,7 @@
         rgba(226, 232, 240, 0.03) 4px
       ),
       radial-gradient(circle at 20% 30%, rgba(5, 150, 105, 0.04), transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(4, 120, 87, 0.03), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(5, 150, 105, 0.03), transparent 50%),
       var(--paper-cream);
     color: var(--ink-dark);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -48,7 +47,7 @@
   .paper-card {
     background:
       radial-gradient(circle at 25% 15%, rgba(5, 150, 105, 0.06), transparent 55%),
-      radial-gradient(circle at 80% 80%, rgba(4, 120, 87, 0.04), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.04), transparent 60%),
       var(--paper-warm);
     border: 1px solid rgba(226, 232, 240, 0.6);
     border-radius: 18px;
@@ -60,7 +59,7 @@
   .paper-card-elevated {
     background:
       radial-gradient(circle at 25% 15%, rgba(5, 150, 105, 0.08), transparent 55%),
-      radial-gradient(circle at 80% 80%, rgba(4, 120, 87, 0.05), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.05), transparent 60%),
       var(--paper-warm);
     border: 1px solid rgba(226, 232, 240, 0.7);
     border-radius: 22px;
@@ -84,13 +83,5 @@
     background: rgba(236, 253, 245, 0.55); /* emerald-50 */
     border-radius: 14px;
     box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.6);
-  }
-
-  .hobby-accent {
-    color: var(--accent-amber);
-  }
-
-  .hobby-accent-border {
-    border-color: var(--accent-rust);
   }
 }
