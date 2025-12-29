@@ -31,7 +31,7 @@ const structuredData = {
 } as const;
 
 const mailtoHref =
-	"mailto:chris@slabworks.ca?subject=Card%20Restoration%20Request&body=Hi%20Slabworks%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Game%3A%0A-%20Number%20of%20cards%3A%0A-%20Damage%20description%3A%0A-%20Goal%20(display%2Fcollection%2Fgrading)%3A%0A-%20Photos%20link%3A%0A%0AThanks!";
+	"mailto:chris@slabworks.ca?subject=Card%20Restoration%20Request&body=Hi%20Slabworks%2C%0A%0AI'd%20like%20to%20request%20restoration%20for%20some%20cards%3A%0A%0A-%20Name%3A%0A-%20Total%20number%20of%20cards%20to%20be%20repaired%3A%0A-%20Card%20names%20%2B%20set%20they%20are%20from%3A%0A-%20Suspected%20damage%3A%0A-%20Goal%20(display%2Fgrading%2Fcollection%20etc)%3A%0A-%20Photos%20of%20cards%3A%0A%0AThanks!";
 
 const howItWorks = [
 	{
@@ -201,6 +201,14 @@ const faqs = [
 							<p class="mt-4 text-sm text-slate-600 sm:mt-5">
 								We typically reply within <strong class="font-semibold text-slate-950">1–2 business days</strong>. If you have a deadline, mention it.
 							</p>
+
+							<div class="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-200/80 shadow-sm">
+								<svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<rect x="2" y="4" width="20" height="16" rx="2"/>
+									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+								</svg>
+								<a href={mailtoHref} class="hover:text-emerald-600 transition-colors">chris@slabworks.ca</a>
+							</div>
 						</div>
 
 						<!-- Before/After Image Switcher -->
