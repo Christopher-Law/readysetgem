@@ -1,7 +1,10 @@
 export const socials = [
-  { label: "Instagram", href: "https://instagram.com/slabworksca", handle: "@slabworksca" },
-  { label: "TikTok", href: "https://tiktok.com/@slabworksca", handle: "@slabworksca" },
-  { label: "YouTube", href: "https://youtube.com/@slabworksca", handle: "@slabworksca" },
+  { label: "TikTok", href: "https://tiktok.com/@slabworksca", handle: "@slabworksca", icon: "tiktok" },
+  { label: "Pinterest", href: "https://pinterest.com/slabworksca", handle: "@slabworksca", icon: "pinterest" },
+  { label: "Snapchat", href: "https://snapchat.com/add/slabworksca", handle: "@slabworksca", icon: "snapchat" },
+  { label: "YouTube", href: "https://youtube.com/@slabworksca", handle: "@slabworksca", icon: "youtube" },
+  { label: "Instagram", href: "https://instagram.com/slabworksca", handle: "@slabworksca", icon: "instagram" },
+  { label: "X", href: "https://x.com/slabworksca", handle: "@slabworksca", icon: "x" },
 ] as const;
 
 export const mailtoHref =
