@@ -1,0 +1,39 @@
+---
+interface Props {
+	beforeSrc: string;
+	afterSrc: string;
+	beforeAlt?: string;
+	afterAlt?: string;
+}
+
+const { beforeSrc, afterSrc, beforeAlt = "Before restoration", afterAlt = "After restoration" } = Astro.props;
+---
+
+<div class="before-after-switcher rounded-3xl overflow-hidden bg-white ring-1 ring-slate-200/80 shadow-sm">
+	<div class="flex border-b border-slate-200">
+		<button
+			class="before-tab flex-1 px-4 py-3 text-sm font-semibold text-slate-950 bg-slate-50 transition-colors"
+			data-tab="before"
+		>
+			Before
+		</button>
+		<button
+			class="after-tab flex-1 px-4 py-3 text-sm font-semibold text-slate-600 hover:text-slate-950 transition-colors"
+			data-tab="after"
+		>
+			After
+		</button>
+	</div>
+	<div class="relative aspect-[4/3]">
+		<img
+			class="before-image absolute inset-0 w-full h-full object-cover"
+			src={beforeSrc}
+			alt={beforeAlt}
+		/>
+		<img
+			class="after-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+			src={afterSrc}
+			alt={afterAlt}
+		/>
+	</div>
+</div>

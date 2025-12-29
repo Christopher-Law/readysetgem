@@ -1,0 +1,62 @@
+---
+// This component includes the script that initializes all before/after switchers
+// Include it once per page that uses BeforeAfterSwitcher components
+---
+
+<script>
+	// Before/After tab switching functionality
+	document.querySelectorAll('.before-after-switcher').forEach((switcher) => {
+		const beforeTab = switcher.querySelector('.before-tab');
+		const afterTab = switcher.querySelector('.after-tab');
+		const beforeImage = switcher.querySelector('.before-image');
+		const afterImage = switcher.querySelector('.after-image');
+
+		let activeTab = 'before'; // Track which tab is currently active
+
+		const showBefore = () => {
+			beforeTab?.classList.add('text-slate-950', 'bg-slate-50');
+			beforeTab?.classList.remove('text-slate-600');
+			afterTab?.classList.remove('text-slate-950', 'bg-slate-50');
+			afterTab?.classList.add('text-slate-600');
+			beforeImage?.classList.remove('opacity-0');
+			afterImage?.classList.add('opacity-0');
+		};
+
+		const showAfter = () => {
+			afterTab?.classList.add('text-slate-950', 'bg-slate-50');
+			afterTab?.classList.remove('text-slate-600');
+			beforeTab?.classList.remove('text-slate-950', 'bg-slate-50');
+			beforeTab?.classList.add('text-slate-600');
+			afterImage?.classList.remove('opacity-0');
+			beforeImage?.classList.add('opacity-0');
+		};
+
+		beforeTab?.addEventListener('click', () => {
+			activeTab = 'before';
+			showBefore();
+		});
+
+		afterTab?.addEventListener('click', () => {
+			activeTab = 'after';
+			showAfter();
+		});
+
+		// Hover functionality
+		beforeTab?.addEventListener('mouseenter', () => {
+			showBefore();
+		});
+
+		afterTab?.addEventListener('mouseenter', () => {
+			showAfter();
+		});
+
+		// Restore to active tab when mouse leaves buttons
+		switcher.addEventListener('mouseleave', () => {
+			if (activeTab === 'before') {
+				showBefore();
+			} else {
+				showAfter();
+			}
+		});
+	});
+</script>

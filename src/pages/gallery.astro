@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BeforeAfterSwitcher from "../components/BeforeAfterSwitcher.astro";
+import BeforeAfterSwitcherScript from "../components/BeforeAfterSwitcherScript.astro";
+
+const examples = Array.from({ length: 12 }).map((_, idx) => {
+	// NOTE: Placeholder images. Replace with real before/after photos when available.
+	const beforeSrc = `https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=600&fit=crop&auto=format&sig=${idx}`;
+	const afterSrc = `https://images.unsplash.com/photo-1747691875590-14db938e42d4?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${idx}`;
+	return { beforeSrc, afterSrc };
+});
+---
+
+<Layout
+	title="Slabworks - Before/After Gallery"
+	description="A larger set of before/after restoration examples (placeholders). Swap with real photos when ready."
+>
+	<a
+		href="#main"
+		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg ring-1 ring-white/30"
+	>
+		Skip to content
+	</a>
+
+	<div class="min-h-dvh bg-slate-50 pb-[calc(6rem+env(safe-area-inset-bottom))] text-slate-950 md:pb-0">
+		<Header active="gallery" sectionHrefPrefix="/" />
+
+		<main id="main">
+			<section class="border-b border-slate-200 bg-white" aria-label="Before and after examples">
+				<div class="mx-auto w-full max-w-6xl px-5 py-10 sm:py-12">
+					<div class="flex flex-wrap items-end justify-between gap-4">
+						<div class="max-w-3xl">
+							<h2 class="text-2xl font-extrabold tracking-tight text-slate-950">Examples</h2>
+							<p class="mt-2 text-sm text-slate-700">
+								Each card toggles between <strong class="font-semibold text-slate-950">Before</strong> and{" "}
+								<strong class="font-semibold text-slate-950">After</strong>.
+							</p>
+						</div>
+					</div>
+
+					<div class="mt-8 grid gap-5 md:grid-cols-3">
+						{examples.map((ex, idx) => (
+							<BeforeAfterSwitcher
+								beforeSrc={ex.beforeSrc}
+								afterSrc={ex.afterSrc}
+								beforeAlt={`Before restoration example ${idx + 1}`}
+								afterAlt={`After restoration example ${idx + 1}`}
+							/>
+						))}
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</div>
+
+	<BeforeAfterSwitcherScript />
+</Layout>
